@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalima112.github.io/racunin/sitemap.xml
