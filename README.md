@@ -1,20 +1,17 @@
-# RACUNIN V6
+# RACUNIN FINAL
 
-Struktur katalog Shopee Affiliate untuk GitHub Pages.
+Versi final static website Shopee Affiliate untuk GitHub Pages.
 
 ## Isi
-- **89 produk/link** dari daftar affiliate yang diberikan.
-- 5 kategori: Anak Kos, Kamar, Gadget, Fashion Wanita, Barang Unik.
-- Pencarian + filter kategori di homepage.
-- **89 halaman detail produk**.
-- Halaman kategori.
-- 3 artikel dasar untuk konten/SEO.
-- `robots.txt` dan `sitemap.xml`.
+- 100 produk dari file export affiliate pengguna
+- Nama produk, harga, penjualan, toko, komisi, dan link affiliate mengikuti katalog
+- Kategori otomatis berdasarkan nama produk: Body Care, Hair Care, Makeup, Parfum, Personal Care, Skincare
+- Pencarian dan filter kategori
+- Halaman detail unik untuk setiap produk
+- Gambar visual ringan berbasis SVG sebagai placeholder/visual katalog (bukan foto resmi seller)
+- `robots.txt` dan `sitemap.xml`
+- Artikel pendukung SEO
 
-## Penting
-11 produk pertama memakai nama produk yang sudah diketahui dari percakapan. Link setelah itu tetap dimasukkan, tetapi karena nama produknya tidak disertakan, produk tersebut diberi nama **Temuan Shopee #XX** agar link tidak tertukar.
-
-Edit judul/deskripsi/kategori produk di `products.js` jika kamu sudah punya nama produk yang sesuai. Link affiliate tidak diubah dari daftar yang diberikan.
-
-## GitHub Pages
-Upload **isi folder ini** ke root repo `kalima112/racunin`, bukan file ZIP-nya. Pastikan `index.html` berada langsung di root repository.
+## Deploy
+Upload seluruh isi folder ini ke repository GitHub Pages `kalima112/racunin`.
+Pastikan `index.html` berada di root repository.
