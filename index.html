@@ -1,0 +1,1508 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RACUNIN — Temuan Shopee yang Worth It</title>
+<meta name="description" content="RACUNIN membantu menemukan produk Shopee dari katalog affiliate: skincare, makeup, parfum, hair care, body care, dan personal care.">
+<style>
+:root{--bg:#fff8fb;--card:#fff;--ink:#211827;--muted:#746a76;--line:#eadfe8;--accent:#ff4f9a;--accent2:#7c4dff;--shadow:0 12px 35px rgba(45,20,50,.09)}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#fff7fb 0,#fff 360px);color:var(--ink)}
+a{color:inherit} .wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{text-decoration:none;font-size:24px;font-weight:900;letter-spacing:-1px} .logo span{color:var(--accent)}
+nav{display:flex;gap:18px;align-items:center;font-weight:700;font-size:14px} nav a{text-decoration:none} .pill{background:#ffe7f2;color:#b62469;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800}
+.hero{padding:55px 0 30px} .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.02;letter-spacing:-3px;margin:15px 0} .lead{font-size:18px;color:var(--muted);max-width:720px;line-height:1.65}
+.search{display:flex;gap:10px;margin-top:25px} .search input{flex:1;padding:16px 18px;border:1px solid var(--line);border-radius:15px;font-size:16px;outline:none;background:white} .search button,.buy{border:0;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;font-weight:900;border-radius:14px;padding:0 20px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.hero-art{border-radius:28px;overflow:hidden;min-height:310px;box-shadow:var(--shadow);background:white;position:relative} .hero-art img{width:100%;height:310px;object-fit:cover;display:block} .hero-caption{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.9);padding:10px 12px;border-radius:12px;font-size:12px;font-weight:800}
+.section{padding:34px 0} .section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px} h2{font-size:30px;margin:0 0 6px} .muted{color:var(--muted);margin:0}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px} .cat-card{padding:0;overflow:hidden;text-align:left;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow);cursor:pointer;color:var(--ink)} .cat-card img{width:100%;height:110px;object-fit:cover;display:block} .cat-card div{padding:11px} .cat-card strong,.cat-card small{display:block} .cat-card small{color:var(--muted);margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px} .card{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.photo{height:190px;background:#f7f2f7;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden} .photo img{width:100%;height:100%;object-fit:cover} .photo span{position:absolute;bottom:8px;left:8px;background:rgba(255,255,255,.9);padding:5px 8px;border-radius:999px;font-size:10px;font-weight:700;color:#6c6270}
+.photo.fallback:before{content:"🛍️";font-size:60px} .card-content{padding:15px;display:flex;flex-direction:column;height:100%} .badge{font-size:11px;font-weight:900;color:#a72d6d;margin-bottom:7px} h3{font-size:16px;line-height:1.35;margin:0 0 10px} .shop{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .stats{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:13px 0;font-size:12px} .stats b{font-size:15px} .stats span{color:#b24a75} .buy{height:42px;width:100%;font-size:13px;margin-top:auto}
+.empty{display:none;text-align:center;padding:45px;color:var(--muted)} footer{margin-top:50px;padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:1000px){.categories{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.hero-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{width:min(100% - 22px,1180px)}nav a:not(.nav-cta){display:none}.categories{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}h1{letter-spacing:-2px}}
+@media(max-width:460px){.grid{grid-template-columns:1fr}.search{flex-direction:column}.search button{height:48px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#">RACUN<span>IN</span> 👀</a>
+<nav><a href="#produk">Produk</a><a href="#kategori">Kategori</a><a href="#tentang">Tentang</a><a class="nav-cta pill" href="#produk">Lihat pilihan</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<span class="pill">✨ Temuan yang worth it</span>
+<h1>Barang bagus yang bikin susah bilang “nggak”.</h1>
+<p class="lead">Temukan pilihan dari katalog affiliate kamu. Kategori dibuat sesuai jenis produk supaya browsing lebih enak dan nggak terasa seperti katalog mentah.</p>
+<form class="search" id="searchForm">
+<input id="search" placeholder="Cari parfum, sunscreen, lip cream..." autocomplete="off">
+<button type="submit">Cari</button>
+</form>
+</div>
+<div class="hero-art">
+<img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Ilustrasi skincare — hanya pemanis">
+<div class="hero-caption">Ilustrasi kategori • hanya pemanis</div>
+</div>
+</div></section>
+
+<section class="section" id="kategori"><div class="wrap">
+<div class="section-head"><div><h2>🛍️ Belanja berdasarkan kategori</h2><p class="muted">Klik kategori untuk memfilter produk.</p></div></div>
+<div class="categories">
+<button class="cat-card" data-filter="Skincare">
+  <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy">
+  <div><strong>Skincare</strong><small>16 produk</small></div>
+</button>
+<button class="cat-card" data-filter="Makeup">
+  <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy">
+  <div><strong>Makeup</strong><small>31 produk</small></div>
+</button>
+<button class="cat-card" data-filter="Parfum">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy">
+  <div><strong>Parfum</strong><small>19 produk</small></div>
+</button>
+<button class="cat-card" data-filter="Hair Care">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtvoNH5esjE63sXEoSRDNqHXaaBLOpKxxl7vBYkWHeg&amp;s=10" alt="Hair Care — ilustrasi pemanis" loading="lazy">
+  <div><strong>Hair Care</strong><small>2 produk</small></div>
+</button>
+<button class="cat-card" data-filter="Body Care">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy">
+  <div><strong>Body Care</strong><small>19 produk</small></div>
+</button>
+<button class="cat-card" data-filter="Personal Care">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy">
+  <div><strong>Personal Care</strong><small>13 produk</small></div>
+</button></div>
+</div></section>
+
+<section class="section" id="produk"><div class="wrap">
+<div class="section-head"><div><h2>🔥 Pilihan dari katalog kamu</h2><p class="muted"><span id="shown">100</span> produk • tombol langsung ke link affiliate.</p></div></div>
+<div class="grid" id="grid">
+<article class="card" data-cat="Body Care" data-search="nuvo sabun mandi cair pump 500ml grtais nuvo refill 400ml desan store27 body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Nuvo Sabun Mandi Cair Pump 500ml GRTAIS Nuvo Refill 400ml</h3>
+    <div class="shop">🏪 DESAN STORE27</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8fSG6FqEIu" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="{terlaris no 1} insspired octarine parfume edp parfumtahanlama|parfumpria|parfumwanita|parfumunisex|parfumtraveling decant autocarestore parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>{TERLARIS NO 1} INSSPIRED OCTARINE PARFUME EDP PARFUMTAHANLAMA|PARFUMPRIA|PARFUMWANITA|PARFUMUNISEX|PARFUMTRAVELING DECANT</h3>
+    <div class="shop">🏪 Autocarestore</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8plgIYpaxx" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="g2g lip serum glad2glow brightening lip serum mencerahkan bibir with vitamin e saysalamshop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>G2G Lip Serum GLAD2GLOW BRIGHTENING LIP SERUM Mencerahkan Bibir with Vitamin E</h3>
+    <div class="shop">🏪 saysalamshop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9056Uroxd0" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="[3pcs] kahf face wash skin energizing &amp; brightening 100ml (triple pack) cozme official ✅ skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>[3PCS] KAHF Face Wash Skin Energizing &amp; Brightening 100mL (Triple Pack)</h3>
+    <div class="shop">🏪 COZME Official ✅</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9AOWhAoKI3" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="white inc alpha glowhite &amp; retinol white body lotion - mencerahkan &amp; melembapkan kulit ae`ra skin body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>White Inc Alpha Glowhite &amp; Retinol White Body Lotion - Mencerahkan &amp; Melembapkan Kulit</h3>
+    <div class="shop">🏪 Ae`ra Skin</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1LffMmI9BY" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="[beli 2 gratis 1] decant mykonos original 3ml 5ml 10ml | parfum original pria wanita | free tester | parfum unisex aflah.scent parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>[BELI 2 GRATIS 1] Decant Mykonos Original 3ml 5ml 10ml | Parfum Original Pria Wanita | Free Tester | Parfum Unisex</h3>
+    <div class="shop">🏪 Aflah.scent</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1Vz5Z5HVqb" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="( harga grosir ) fress batang sabun wangi batang fress macaron, cotton, green mirage fress sabun harga batangan lapak_tokokku personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>( HARGA GROSIR ) FRESS BATANG sabun wangi batang Fress macaron, cotton, green Mirage Fress sabun Harga Batangan</h3>
+    <div class="shop">🏪 Lapak_Tokokku</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1gIVlOGsVe" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="cermin rias makeup lucu gaya kartun standing mirror minimalis dekorasi kaca meja aesthetic oura accessories makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Cermin Rias Makeup Lucu Gaya Kartun Standing Mirror Minimalis Dekorasi Kaca Meja Aesthetic</h3>
+    <div class="shop">🏪 Oura Accessories</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1qbvxhGFAh" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="ms glow - facial wash super clean - 100 ml ms glow beauty official store skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>MS GLOW - FACIAL WASH SUPER CLEAN - 100 ML</h3>
+    <div class="shop">🏪 MS Glow Beauty Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/20vMA0Fbpk" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="(buy 1 get 1) scarlite perfume unisex 30ml eterna.id parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>(Buy 1 Get 1) Scarlite Perfume Unisex 30ml</h3>
+    <div class="shop">🏪 Eterna.Id</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2BEmMJEyUn" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="g2g lip serum - glad2glow lip brightening serum 7g - mencerahkan, melembapkan, dan beri warna dengan tekstur ringan saysalamshop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>G2G Lip serum - Glad2Glow Lip Brightening Serum 7g - Mencerahkan, Melembapkan, dan Beri Warna dengan Tekstur Ringan</h3>
+    <div class="shop">🏪 saysalamshop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2LYCYcEL9q" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="[kooko] 13pcs soft kuas makeup set kosmetic brushes powder eye shadow blusher kuas with pouch - 7001 kooko makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>[KOOKO] 13pcs Soft Kuas Makeup Set Kosmetic Brushes Powder Eye Shadow Blusher Kuas With Pouch - 7001</h3>
+    <div class="shop">🏪 Kooko</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2VrckvDhot" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="( harga grosir )  500ml hanbody lovely jumbo emeron lovely handbody 500ml ready banyak varian, jeju, white pearl, almond, radiant, &amp; bengkoang. kemasan baru 500ml lapak_tokokku personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>( HARGA GROSIR )  500ML HANBODY LOVELY JUMBO EMERON LOVELY HANDBODY 500ML Ready Banyak Varian, Jeju, White Pearl, Almond, Radiant, &amp; Bengkoang. Kemasan Baru 500ml</h3>
+    <div class="shop">🏪 Lapak_Tokokku</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1AHmKNDtQ" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="mykonos all varian decant | 3ml 5ml 10ml original share in jar decant by society parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>MYKONOS ALL VARIAN DECANT | 3ml 5ml 10ml ORIGINAL SHARE IN JAR</h3>
+    <div class="shop">🏪 Decant by society</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/BThydMaYT" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="implora day to day two way cake | bedak ringan &amp; samarkan pori implora official shop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Implora Day To Day Two Way Cake | Bedak Ringan &amp; Samarkan Pori</h3>
+    <div class="shop">🏪 Implora Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/Ln8AwLxDW" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="eyeshadow stick 3 warna gradasi multifungsi shimmer waterproof long lasting tahan lama tahan air makeup meet beauty makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Eyeshadow Stick 3 Warna Gradasi Multifungsi Shimmer Waterproof Long Lasting Tahan Lama Tahan Air Makeup</h3>
+    <div class="shop">🏪 Meet Beauty</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/W6YNFLJsZ" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="inai kuku for muslimah kutek kuku halal sah untuk sholat tahan lama cacashop85 personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>Inai Kuku For muslimah kutek kuku Halal Sah Untuk Sholat Tahan Lama</h3>
+    <div class="shop">🏪 CACASHOP85</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/gPyZYKgXc" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="parfum scarlet extrait eau de parfum 30 ml | parfum wangi tahan lama | parfum unisex nurr aroma parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>PARFUM SCARLET EXTRAIT EAU DE PARFUM 30 ML | PARFUM Wangi Tahan Lama | Parfum Unisex</h3>
+    <div class="shop">🏪 Nurr aroma</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/qjOlrK3Cf" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="sabun giv batang 72gr ( cek variasi ) faikshopjember personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>Sabun GIV Batang 72gr ( Cek Variasi )</h3>
+    <div class="shop">🏪 FAIKSHOPJEMBER</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/112oyAJPri" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="[ori bpom] kahf face wash 100ml | sabun pembersih wajah pria | gentle exfoliating | face scrub celeste.store skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>[ORI BPOM] KAHF Face Wash 100ml | Sabun Pembersih Wajah Pria | Gentle Exfoliating | Face Scrub</h3>
+    <div class="shop">🏪 CELESTE.STORE</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1BMFATImWl" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="paket 18 pcs sabun mandi shinzui skin lightening 60gr - mencerahkan kulit, menjaga kelembapan, aroma menenangkan olime official shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Paket 18 pcs Sabun Mandi Shinzui Skin Lightening 60gr - Mencerahkan Kulit, Menjaga Kelembapan, Aroma Menenangkan</h3>
+    <div class="shop">🏪 OLIME Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/40gQXg7zmK" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="[terlaris]  scarlett inspired edp &amp; extrait de parfum 30ml wangi tahan lama - autocarestore parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>[TERLARIS]  SCARLETT Inspired EDP &amp; Extrait De Parfum 30ml Wangi Tahan Lama -</h3>
+    <div class="shop">🏪 Autocarestore</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4Azqjz7MRN" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="bpom gloow&amp;be glass skin sunscreen glowing hybrid tone up no effort spf 40 pa+++ 50ml - narcisse narcisse skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>BPOM Gloow&amp;be Glass Skin Sunscreen Glowing Hybrid Tone Up No Effort SPF 40 PA+++ 50ml - Narcisse</h3>
+    <div class="shop">🏪 Narcisse</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4LJGwI6j6Q" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="lipcream omg matte kiss clearence sale caca solo makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>lipcream OMG matte kiss clearence sale</h3>
+    <div class="shop">🏪 caca solo</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4Vch8b65lT" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="lovely naturals body serum original jumbo besar 400ml faiz cosmetik &amp; accesoris body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Lovely Naturals Body Serum Original Jumbo Besar 400ml</h3>
+    <div class="shop">🏪 Faiz Cosmetik &amp; Accesoris</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4fw7Ku5SQW" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="parfum mix d&#x27;nhill x scandalush beli 1 dapat 3 eau de parfume unisex tahan lama 12 jam rumahparfume.id parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>Parfum Mix D&#x27;nhill X Scandalush Beli 1 Dapat 3 Eau De Parfume Unisex Tahan Lama 12 Jam</h3>
+    <div class="shop">🏪 Rumahparfume.id</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4qFXXD4p5Z" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="glad2glow facial cleanser blueberry ceramide low ph face gel cleanser 70ml pembersih wajah pembersih muka | deep pore cleanser volcanic ash | yuzu vitamin c | acne gel cleanser dewskinstudio.id skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Glad2Glow Facial Cleanser Blueberry Ceramide Low pH Face Gel Cleanser 70ml Pembersih Wajah Pembersih Muka | Deep Pore Cleanser Volcanic Ash | Yuzu Vitamin C | Acne gel cleanser</h3>
+    <div class="shop">🏪 DewSkinStudio.id</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/50YxjW4Bkc" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="cermin bunga standing mirror makeup rotating cermin aesthetic | stand mirorr flower kaca meja rias serbaguna supplier termurah official makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Cermin Bunga Standing Mirror Makeup Rotating Cermin Aesthetic | Stand Mirorr Flower Kaca Meja Rias Serbaguna</h3>
+    <div class="shop">🏪 Supplier Termurah Official</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5AsNvp3YPf" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="12pcs sabun giv batang 72gr promo murah random diffanibeautystore personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>12Pcs Sabun GIV Batang 72gr PROMO Murah Random</h3>
+    <div class="shop">🏪 DiffaniBeautyStore</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2gB2xED4UC" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="pucelle eau de luxe parfum 50ml wanita multitalenta harumearoma parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>Pucelle Eau De Luxe Parfum 50ml Wanita Multitalenta</h3>
+    <div class="shop">🏪 HarumeAroma</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2qUT9XCR9F" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="inaikuku muslimah by lubaba henna halal bpom zaaraaa23 personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>INAIKUKU MUSLIMAH BY LUBABA HENNA HALAL BPOM</h3>
+    <div class="shop">🏪 Zaaraaa23</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/30ntLqBnoI" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="eyeshadow stick 3 warna gradasi shimmer pigmented waterproof tahan lama mudah dibaurkan sekali oles untuk pemula seelight beauty store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Eyeshadow Stick 3 Warna Gradasi Shimmer Pigmented Waterproof Tahan Lama Mudah Dibaurkan Sekali Oles Untuk Pemula</h3>
+    <div class="shop">🏪 SeeLight Beauty Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3B7JY9BATL" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="white inc alpha glowhite 100 ml body lotion whitening menghidrasi kulit | tester | mencerahkan memutihkan @family-1@ body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>WHITE INC Alpha Glowhite 100 ml Body Lotion Whitening Menghidrasi Kulit | Tester | Mencerahkan memutihkan</h3>
+    <div class="shop">🏪 @FAMILY-1@</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3LQjkSAX8O" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="parfum scarlett eau de parfum 30ml - aroma mewah, desain portabel, pilihan varian scentedblish_ parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>Parfum Scarlett Eau De Parfum 30ml - Aroma Mewah, Desain Portabel, Pilihan Varian</h3>
+    <div class="shop">🏪 ScentedBlish_</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3Vk9wl9tnR" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="drve paket bundling 6in1 mengandung niacinamideanti  aging brightening  membantu mengurangi tanda-tanda penuaan dini dan membantu menjaga kelembapan kulit sepanjang hari acne treatment  glowing set drve official store skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Drve paket bundling 6in1 mengandung NiacinamideAnti  Aging Brightening  Membantu mengurangi tanda-tanda penuaan dini dan membantu menjaga kelembapan kulit sepanjang hari Acne Treatment  Glowing Set</h3>
+    <div class="shop">🏪 Drve Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3g3a949GSU" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="collagen foot cream 60g krim kaki pecah dan kering dan kasar ampuh foot cream 100% original perbaikan anti kering retak perawatan kulit - mencegah kekeringan mencegah kaki retak krim pelembab dalam krim perawatan kaki krim tumit kaki kapalan pecah kasar healthcare doctor body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Collagen Foot Cream 60g Krim Kaki Pecah Dan Kering Dan Kasar Ampuh foot cream 100% Original Perbaikan Anti Kering Retak Perawatan Kulit - Mencegah Kekeringan Mencegah Kaki Retak Krim Pelembab Dalam Krim Perawatan Kaki Krim Tumit Kaki Kapalan Pecah Kasar</h3>
+    <div class="shop">🏪 healthcare doctor</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3qN0LN8d7X" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="white inc alpha glow white body lotion whitening &amp; moisturizing | body cream body lotion menghidrasi kulit pemula.id body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
+    <div class="shop">🏪 pemula.id</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/7AdSJUvwMC" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="scarlett eau de perfume &amp; extrait de perfume 30ml - all variant finishshop.co parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>Scarlett Eau De Perfume &amp; Extrait De Perfume 30ml - All Variant</h3>
+    <div class="shop">🏪 finishshop.co</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/70K27BwZhB" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="shampo sachet zinc kemasan renceng isi 24 pcs murah toko@himmah personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>shampo sachet zinc kemasan renceng isi 24 pcs murah</h3>
+    <div class="shop">🏪 toko@himmah</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/6q0busxD2A" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="omg oh my glam matte kiss lip cream ombre oh my glam lipstik arfiz olshop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>OMG OH MY GLAM MATTE Kiss Lip Cream OMBRE OH MY GLAM LIPSTIK</h3>
+    <div class="shop">🏪 Arfiz Olshop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/6fhBiZxqN9" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="paket hemat 2 pcs pepsodent strong + 3 pcs sabun dettol zz perfume personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>PAKET HEMAT 2 PCS PEPSODENT STRONG + 3 PCS SABUN DETTOL</h3>
+    <div class="shop">🏪 ZZ Perfume</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/7pt96itP0O" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="gumiho | bulu mata palsu 10-12mm length 10 baris trilogy bulu mata palus 3d natural bulmat eyelash extension perlu lem lentik mlen (tidak termasuk lem) holo cos store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>GUMIHO | BULU MATA PALSU 10-12mm Length 10 BARIS Trilogy Bulu Mata Palus 3D Natural bulmat eyelash extension Perlu Lem Lentik Mlen (tidak termasuk lem)</h3>
+    <div class="shop">🏪 HOLO Cos Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/7fZiuPu2LN" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="dazzle me ink-gloss lip tint lip gloss tahan lama glossy dan plumpy finish waterproof stained high pigmented twiebeauty makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>DAZZLE ME INK-GLOSS Lip Tint Lip Gloss Tahan Lama Glossy dan Plumpy Finish Waterproof Stained High Pigmented</h3>
+    <div class="shop">🏪 twiebeauty</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/7VGIi6ufgM" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="[bpom] lubaba henna\ inai kuku halal sah solat/warna tahan lama dan pekat er.mart personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>[BPOM] LUBABA HENNA\ INAI KUKU HALAL SAH SOLAT/WARNA TAHAN LAMA DAN PEKAT</h3>
+    <div class="shop">🏪 ER.mart</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/7KwsVnvJ1L" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="paket hemat 3 parfum premium 100ml perfume indo store parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>PAKET HEMAT 3 PARFUM PREMIUM 100ML</h3>
+    <div class="shop">🏪 Perfume Indo Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5q84j31144" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="jetzky -  bulu mata palsu eyelash extension natural aksesoris make up daily riasan mata korean beauty premium jetzky.store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>JETZKY -  Bulu Mata Palsu Eyelash Extension Natural Aksesoris Make Up Daily Riasan Mata Korean Beauty Premium</h3>
+    <div class="shop">🏪 jetzky.store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5foeWk1eP3" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="lipstik batang sensational colour matte tahan lama toko_cantik ku makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Lipstik Batang Sensational Colour Matte Tahan Lama</h3>
+    <div class="shop">🏪 Toko_Cantik ku</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5VVEKR2Hk2" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="white inc alpha glowhite body lotion  mencerahkan kulit  - 100ml  dengan kandungan alpha arbutin &amp; 10 whitening agent toko kosmetik shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>White Inc Alpha Glowhite Body Lotion  Mencerahkan Kulit  - 100ml  Dengan Kandungan Alpha Arbutin &amp; 10 Whitening Agent</h3>
+    <div class="shop">🏪 Toko kosmetik shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5LBo882v51" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="[mix 3 parfum - bebas pilih varian] scarlett eau de parfum &amp; extrait de parfum 30ml wangi tahan lama - wangi mewah scarlett whitening official shop parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>[MIX 3 PARFUM - BEBAS PILIH VARIAN] SCARLETT Eau De Parfum &amp; Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah</h3>
+    <div class="shop">🏪 Scarlett Whitening Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/6VNlWGyTiG" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="lestari butik - puffy pouch polkadot kecil list navy - ribbon navy - cute pouch - makeup pouch -puffy pouch makeup polkadot ribbon navy butik lestari makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Lestari Butik - Puffy pouch polkadot kecil list navy - ribbon navy - cute pouch - makeup pouch -puffy pouch makeup polkadot ribbon navy</h3>
+    <div class="shop">🏪 butik lestari</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/6L4LJxz73F" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="glad2glow perfect cover cushion foundation waterproof make up setting concealer bb cream tahan lama hingga 12 jam hasil akhir kliki beauty makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Glad2Glow Perfect Cover Cushion Foundation Waterproof Make Up Setting Concealer BB Cream Tahan Lama Hingga 12 Jam Hasil Akhir</h3>
+    <div class="shop">🏪 Kliki Beauty</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/6Akv7ezkOE" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="nivea body lotion daily protection sun spf 33 100ml | merah jingga official merah jingga official store body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Nivea Body Lotion Daily Protection Sun spf 33 100ml | Merah Jingga Official</h3>
+    <div class="shop">🏪 Merah Jingga Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/60RUvM0NjD" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="pigeon teens paket lengkap skincare kulit glowing kulit kusam kulit mencerahkan kulit berjerawat newtokotoko skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Pigeon Teens Paket Lengkap Skincare Kulit Glowing Kulit Kusam Kulit Mencerahkan Kulit Berjerawat</h3>
+    <div class="shop">🏪 NewTokoToko</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9peDUOlmwy" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="birth of venus parfum cowok premium extrait de parfum 100ml tahan lama royale sanctiors parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>BIRTH OF VENUS Parfum Cowok Premium Extrait De Parfum 100ML TAHAN LAMA</h3>
+    <div class="shop">🏪 ROYALE SANCTIORS</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9fKnI5mQHx" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="azzura liptint - hydrating color stain smooth glossy plumpy longlasting wings official shop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Azzura Liptint - Hydrating Color Stain Smooth Glossy Plumpy Longlasting</h3>
+    <div class="shop">🏪 Wings Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9V1N5mn3cw" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="glow &amp; lovely sabun mandi cair refill 800ml desan store27 body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Glow &amp; Lovely Sabun Mandi Cair Refill 800ml</h3>
+    <div class="shop">🏪 DESAN STORE27</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9KhwtTngxv" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Hair Care" data-search="[ bpom &amp; halal ] shampo kemiri penumbuh rambut cepat anti ketombe penghilang uban dan rontok - 500ml terlaris &amp; viral anythingshop.id hair care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtvoNH5esjE63sXEoSRDNqHXaaBLOpKxxl7vBYkWHeg&amp;s=10" alt="Hair Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Hair Care</div>
+    <h3>[ BPOM &amp; HALAL ] Shampo Kemiri Penumbuh Rambut Cepat Anti Ketombe Penghilang Uban dan Rontok - 500ml TERLARIS &amp; VIRAL</h3>
+    <div class="shop">🏪 AnythingShop.id</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/AUtuHcjFbA" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="brush cleanser spray omg.itsfresh termurah d&amp;gbeautyshop skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>BRUSH CLEANSER SPRAY OMG.ITSFRESH TERMURAH</h3>
+    <div class="shop">🏪 D&amp;GBeautyshop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/AKaU5Jjsw9" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="maange creamy blush on stick multi-use high pigmented long-lasting light nutrual face makeup mg-f03 maange official store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>MAANGE Creamy Blush On Stick Multi-Use High Pigmented Long-lasting Light Nutrual Face Makeup MG-F03</h3>
+    <div class="shop">🏪 MAANGE Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/AAH3t0kWH8" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="promo dapat 3 parfum box premium sparkling series scentpro parfum pemikat parfum pria wanita semarmesem19 parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>PROMO DAPAT 3 PARFUM BOX PREMIUM SPARKLING SERIES SCENTPRO PARFUM PEMIKAT PARFUM PRIA WANITA</h3>
+    <div class="shop">🏪 Semarmesem19</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9zxdghl9c7" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="parfum dunhil blue || parfum pria fresh tahan lama || parfum pria || parfum cowok tahan lama 30ml youme.scent parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>PARFUM DUNHIL BLUE || PARFUM PRIA FRESH TAHAN LAMA || PARFUM PRIA || PARFUM COWOK TAHAN LAMA 30ML</h3>
+    <div class="shop">🏪 Youme.scent</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8V8ptwqreq" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="vaseline soft glow gluta vitamin body serum spf20 dengan niacinamide - body serum untuk perlindungan uv, kulit cerah &amp; lembap 100ml unilever beauty shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Vaseline Soft Glow Gluta Vitamin Body Serum SPF20 dengan Niacinamide - Body Serum untuk Perlindungan UV, Kulit Cerah &amp; Lembap 100mL</h3>
+    <div class="shop">🏪 Unilever Beauty Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8KpPhdrUzp" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="focallure 2-in-1 on &amp; fix eyebrow pomade &amp; concealer 24h long-lasting waterproof smudge-proof pinkpick official store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>FOCALLURE 2-in-1 On &amp; Fix Eyebrow Pomade &amp; Concealer 24H Long-lasting Waterproof Smudge-proof</h3>
+    <div class="shop">🏪 PinkPick Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8AVzVKs8Ko" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="new formula ozzaskin anti dark spot sunscreen spf50+ pa++++ by oki setiana dewi 50gr halal bpom mengandung niacinamide, vit c &amp; hyaluronic acid melindungi dari sinar uva uvb, membantu menyamarkan flek hitam, mencerahkan, melembapkan &amp; menjaga skin barrier ozzaskin official store skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>New Formula Ozzaskin Anti Dark Spot Sunscreen SPF50+ PA++++ By Oki Setiana Dewi 50gr Halal BPOM Mengandung Niacinamide, Vit C &amp; Hyaluronic Acid Melindungi dari Sinar UVA UVB, Membantu Menyamarkan Flek Hitam, Mencerahkan, Melembapkan &amp; Menjaga Skin Barrier</h3>
+    <div class="shop">🏪 Ozzaskin Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/80CZJ1slfn" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="ahmed al maghribi rose noir extrait de parfum 75 ml ahmed al maghribi official store parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>AHMED AL MAGHRIBI Rose Noir Extrait De Parfum 75 ML</h3>
+    <div class="shop">🏪 Ahmed Al Maghribi Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9AOWhAoKJ2" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="[400ml] white inc alpha glow white body lotion whitening &amp; moisturizing | body cream body lotion menghidrasi kulit white inc official shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>[400ml] WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
+    <div class="shop">🏪 White Inc Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/9056Uroxe1" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="omg oh my glam matte kis lip cream 3.5 gr | omg lip kiss lip cream omg matte last lip cream realmen makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>OMG OH MY GLAM Matte Kis Lip Cream 3.5 gr | OMG Lip Kiss Lip Cream omg Matte Last Lip Cream</h3>
+    <div class="shop">🏪 REALMEN</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8plgIYpaz0" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="vaseline repairing petroleum jelly original 100% pure 50ml unilever beauty shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
+    <div class="shop">🏪 Unilever Beauty Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/8fSG6FqEJz" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="bulu mata extension 10 baris bulu mata palsu eyelash extension riasan mata trilogy chernailart makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Bulu Mata Extension 10 Baris Bulu Mata Palsu Eyelash Extension Riasan Mata Trilogy</h3>
+    <div class="shop">🏪 Chernailart</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1qbvxhGFBg" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="rexa natural deodorant rexa tawas cair 100ml menghilangkan bau badan / ketiak kamaskoat body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>REXA Natural Deodorant REXA Tawas Cair 100ml menghilangkan bau badan / ketiak</h3>
+    <div class="shop">🏪 Kamaskoat</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1gIVlOGsWf" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="maskara lijieyou viral maskara 2 warna tahan air dan kering long lasting curling mascara waterproof anti air dan smudge eye makeup rumi.rumi00 makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>MASKARA LIJIEYOU VIRAL Maskara 2 warna tahan air dan kering long lasting curling mascara waterproof anti air dan smudge eye makeup</h3>
+    <div class="shop">🏪 Rumi.rumi00</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1Vz5Z5HVre" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="acnaway mugwort gel facial wash 100ml- acne friendly gentle cleanser sabun cuci muka untuk kulit berjerawat sensitif wajah bersih tidak kering face wash sabun muka oil control fungal acne safe skincare daily cleanser all skin type facewash acnaway official shop skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>ACNAWAY Mugwort Gel Facial Wash 100ml- Acne Friendly Gentle Cleanser Sabun Cuci Muka Untuk Kulit Berjerawat Sensitif Wajah Bersih Tidak Kering Face Wash Sabun Muka Oil Control Fungal Acne Safe Skincare Daily Cleanser All Skin Type Facewash</h3>
+    <div class="shop">🏪 Acnaway Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1LffMmI9Cd" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="cod bpom kudan kutek halal peel off  muslimah untuk sholat cat kuku 10ml (mz02) store_kudan personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>COD BPOM Kudan Kutek Halal Peel Off  Muslimah Untuk Sholat Cat kuku 10ml (MZ02)</h3>
+    <div class="shop">🏪 Store_Kudan</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2VrckvDhps" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="deodorant original spray tawas 60ml deo_skin body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>DEODORANT ORIGINAL SPRAY TAWAS 60ML</h3>
+    <div class="shop">🏪 Deo_Skin</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2LYCYcELAr" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="hanasui mattedorable lip cream | boba edition | merah jingga official merah jingga official store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Hanasui Mattedorable Lip Cream | BOBA EDITION | Merah Jingga Official</h3>
+    <div class="shop">🏪 Merah Jingga Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2BEmMJEyVq" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="[raisa marie &amp; harry vaughan&#x27;s pick] npure sunscreen sport spf 50+ pa++++ sunscreen uva/uvb protection / water resistant / sunscreen olahraga ringan / sweat resistant/ aman bumil busui npure official shop skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>[Raisa Marie &amp; Harry Vaughan&#x27;s Pick] NPURE Sunscreen Sport SPF 50+ PA++++ Sunscreen UVA/UVB Protection / Water Resistant / Sunscreen Olahraga Ringan / Sweat Resistant/ Aman Bumil Busui</h3>
+    <div class="shop">🏪 Npure Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/20vMA0Fbqp" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="garnier color natural express cream long lasting / ultra color sachet thebeautyhouse personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>GARNIER Color Natural Express Cream Long Lasting / Ultra Color Sachet</h3>
+    <div class="shop">🏪 TheBeautyHouse</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/W6YNFLJtY" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="[lebih murah] purbasari lulur pengantin 500g / lulur pemutih whitening pencerah / lulur pelembab kulit / lulur badan perontok daki / kemasan hemat ekonomis purbasari official store body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>[Lebih Murah] Purbasari Lulur Pengantin 500G / Lulur Pemutih Whitening Pencerah / Lulur pelembab kulit / Lulur Badan perontok daki / Kemasan Hemat ekonomis</h3>
+    <div class="shop">🏪 Purbasari Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/Ln8AwLxEX" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="[ belia ] dazzle me get a grip! makeup setting spray 30ml | 60ml | matte fix dewy fix | tahan 24 jam belia cosmetic makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>[ BELIA ] DAZZLE ME Get a Grip! Makeup Setting Spray 30ml | 60ml | Matte Fix Dewy Fix | Tahan 24 jam</h3>
+    <div class="shop">🏪 Belia Cosmetic</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/BThydMaZW" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="perface bpom&amp;halal lazy cream tone up cream brightening &amp; whitening moisturizing radiance &amp; care for skin] perface.indonesia skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>PERFACE BPOM&amp;HALAL LAZY CREAM TONE UP CREAM BRIGHTENING &amp; WHITENING MOISTURIZING Radiance &amp; Care For Skin]</h3>
+    <div class="shop">🏪 Perface.Indonesia</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1AHmKNDuV" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="bulumata ne110 natural bagus dipakai buat sehari - hari putrieyelashes personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>Bulumata NE110 Natural Bagus Dipakai Buat Sehari - Hari</h3>
+    <div class="shop">🏪 Putrieyelashes</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/1BMFATImXk" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="nivea body serum extra bright day &amp; night (care &amp; protect + night nourish) 180ml x2 - merawat &amp; mencerahkan kulit di pagi &amp; malam nivea official store body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>NIVEA Body Serum Extra Bright Day &amp; Night (Care &amp; Protect + Night Nourish) 180ml x2 - Merawat &amp; mencerahkan kulit di pagi &amp; malam</h3>
+    <div class="shop">🏪 NIVEA Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/112oyAJPsj" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="maange kepala ganda eyebrow pencil 3d tahan air sculpting long-lasting highly pigment pensil alis mg-e04 maange official store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>MAANGE Kepala Ganda Eyebrow Pencil 3D Tahan Air Sculpting Long-lasting Highly Pigment Pensil Alis MG-E04</h3>
+    <div class="shop">🏪 MAANGE Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/qjOlrK3Di" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="somethinc ceraplump tinted lip balm spf25 pa++++ - warna untuk melembabkan &amp; memperkuat lip barrier | glowy finish, untuk bibir terlihat lebih sehat &amp; plumpy somethinc official shop makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>SOMETHINC Ceraplump Tinted Lip Balm SPF25 PA++++ - Warna Untuk Melembabkan &amp; Memperkuat Lip Barrier | Glowy Finish, Untuk Bibir Terlihat Lebih Sehat &amp; Plumpy</h3>
+    <div class="shop">🏪 SOMETHINC Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/gPyZYKgYh" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="miniso body mist 150ml fragrance spray tahan lama natural series eau de body spray parfum parfum vanilla perfum spray pengharum badan unisex  hair mist parfum rambut miniso indonesia parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut</h3>
+    <div class="shop">🏪 MINISO INDONESIA</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4Vch8b65mS" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Personal Care" data-search="kime luminizing jeju brightening soap – sabun pencerah badan wajah sabun pemutih glowing badan muka kime skincare official store personal care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Personal Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Personal Care</div>
+    <h3>KIME LUMINIZING JEJU BRIGHTENING SOAP – Sabun Pencerah Badan Wajah Sabun Pemutih Glowing Badan Muka</h3>
+    <div class="shop">🏪 Kime Skincare Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4LJGwI6j7R" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="igoodco (ig3110/ig3110s) pearlescent matte easy tinting eyeshadow book igoodco makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>IGOODCO (IG3110/IG3110S) Pearlescent Matte Easy Tinting Eyeshadow Book</h3>
+    <div class="shop">🏪 IGOODCO</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4Azqjz7MSQ" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="glad2glow brightening lip serum 7g | lip serum 3in1 | melembapkan, mencerahkan &amp; memberi warna natural | vitamin c &amp; e august store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Glad2Glow Brightening Lip Serum 7g | Lip Serum 3in1 | Melembapkan, Mencerahkan &amp; Memberi Warna Natural | Vitamin C &amp; E</h3>
+    <div class="shop">🏪 August Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/40gQXg7znP" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="suntikan parfum 1ml untuk decant pemindah parfum dari botol asli - suntik syringe perfume pump dispenser pao2store parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>Suntikan Parfum 1ml untuk Decant Pemindah Parfum dari Botol Asli - Suntik Syringe Perfume Pump Dispenser</h3>
+    <div class="shop">🏪 pao2store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/5AsNvp3YQe" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="[ belia ] nivea deodorant roll on | 25 | 50 | men | women | whitening pearl beauty silk touch hijab belia cosmetic body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>[ BELIA ] NIVEA Deodorant Roll On | 25 | 50 | Men | Women | Whitening Pearl Beauty Silk Touch Hijab</h3>
+    <div class="shop">🏪 Belia Cosmetic</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/50YxjW4Bld" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="unimese muge leen 9 warna eyeshadow waterproof tahan air perona mata palet untuk harian unimese makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Unimese Muge Leen 9 Warna Eyeshadow Waterproof Tahan Air Perona Mata Palet Untuk Harian</h3>
+    <div class="shop">🏪 UNIMESE</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4qFXXD4p6c" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="papaya all skin facial wash pemutih penghilang flek hitam pembersih wajah pemutih wajah jerawat tungau pembersih dan komedo mencerahkan warna suger beautier skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Papaya All Skin facial wash Pemutih Penghilang Flek Hitam Pembersih Wajah Pemutih Wajah Jerawat Tungau Pembersih Dan Komedo Mencerahkan warna</h3>
+    <div class="shop">🏪 Suger Beautier</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/4fw7Ku5SRb" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Hair Care" data-search="miranda hair colour 30gr | cat rambut miranda | tnt beauty shop tnt beauty shop hair care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtvoNH5esjE63sXEoSRDNqHXaaBLOpKxxl7vBYkWHeg&amp;s=10" alt="Hair Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Hair Care</div>
+    <h3>Miranda Hair Colour 30gr | Cat Rambut Miranda | TnT Beauty Shop</h3>
+    <div class="shop">🏪 TnT Beauty Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3B7JY9BAUK" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="marina healthy booster brightening serum series 185ml mulia stationery skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Marina Healthy Booster Brightening Serum Series 185ml</h3>
+    <div class="shop">🏪 Mulia Stationery</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/30ntLqBnpJ" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="bedak basah  perfect powder cream 10ml ( 1pcs ) - daviena skincare daviena skincare official store makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>BEDAK BASAH  Perfect Powder Cream 10ml ( 1PCS ) - DAVIENA SKINCARE</h3>
+    <div class="shop">🏪 DAVIENA SKINCARE Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2qUT9XCRAI" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="[best seller sunscreen] hanasui collagen water sunscreen spf 50 pa+++ - mencerahkan melembapkan no whitecast ringan cepat meresap collagen niacinamide wajah glowing tabir surya skincare bpom sunblock anti uva uvb protection kulit berminyak hanasui official shop skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>[BEST SELLER SUNSCREEN] HANASUI Collagen Water Sunscreen SPF 50 PA+++ - Mencerahkan Melembapkan No Whitecast Ringan Cepat Meresap Collagen Niacinamide Wajah Glowing Tabir Surya Skincare BPOM Sunblock Anti UVA UVB Protection Kulit Berminyak</h3>
+    <div class="shop">🏪 Hanasui Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/2gB2xED4VH" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Skincare" data-search="makarizo barber daily bright radiance face wash 100ml | merah jingga official merah jingga official store skincare">
+  <div class="photo">
+    <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Skincare — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Skincare</div>
+    <h3>Makarizo Barber Daily Bright Radiance Face Wash 100ml | Merah Jingga Official</h3>
+    <div class="shop">🏪 Merah Jingga Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3qN0LN8d8W" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Parfum" data-search="heura scandal - extrait de parfum - aroma sweet fruity parfum perfume minyak wangi wanita tahan lama heura official store parfum">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Parfum — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Parfum</div>
+    <h3>HEURA Scandal - Extrait de Parfum - Aroma Sweet Fruity Parfum Perfume Minyak Wangi Wanita Tahan Lama</h3>
+    <div class="shop">🏪 HEURA Official Store</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3g3a949GTV" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Makeup" data-search="liquid blush watercolor  perona pipi blush on cair  liquid matte tahan lama dan anti air blusher  high pigmented  pemerah pipi   perona natural moisturizing multi guna tahan lama eyeshadow rosetims makeup">
+  <div class="photo">
+    <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Makeup — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Makeup</div>
+    <h3>Liquid Blush watercolor  Perona Pipi Blush On Cair  liquid matte tahan lama dan anti air blusher  high pigmented  pemerah pipi   Perona natural moisturizing Multi Guna Tahan Lama Eyeshadow</h3>
+    <div class="shop">🏪 ROSETIMS</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3Vk9wl9toU" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article>
+<article class="card" data-cat="Body Care" data-search="vaseline repairing petroleum jelly original 100% pure 50ml unilever indonesia official shop body care">
+  <div class="photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Body Care — ilustrasi pemanis" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span>Ilustrasi • hanya pemanis</span>
+  </div>
+  <div class="card-content">
+    <div class="badge">Body Care</div>
+    <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
+    <div class="shop">🏪 Unilever Indonesia Official Shop</div>
+    <div class="stats"><b>Mulai Lihat harga</b><span>🔥 — terjual</span></div>
+    <a class="buy" href="https://s.shopee.co.id/3LQjkSAX9T" target="_blank" rel="sponsored noopener noreferrer">CEK DI SHOPEE →</a>
+  </div>
+</article></div>
+<div class="empty" id="empty">Produk tidak ditemukan. Coba kata kunci lain.</div>
+</div></section>
+
+<section class="section" id="tentang"><div class="wrap">
+<h2>RACUNIN — temuan Shopee yang worth it.</h2>
+<p class="muted">Gambar kategori di situs ini hanya sebagai pemanis visual. Data produk, harga, toko, dan tautan belanja berasal dari katalog affiliate yang kamu berikan.</p>
+</div></section>
+</main>
+<footer><div class="wrap">Disclosure: RACUNIN dapat memperoleh komisi dari pembelian melalui link affiliate. © 2026 RACUNIN.</div></footer>
+
+<script>
+const cards=[...document.querySelectorAll('.card')], shown=document.getElementById('shown'), empty=document.getElementById('empty'), input=document.getElementById('search');
+let active='Semua';
+function apply(){
+ const q=input.value.toLowerCase().trim(); let n=0;
+ cards.forEach(c=>{const okCat=active==='Semua'||c.dataset.cat===active;const okQ=!q||c.dataset.search.includes(q);const ok=okCat&&okQ;c.style.display=ok?'flex':'none';if(ok)n++;});
+ shown.textContent=n; empty.style.display=n?'none':'block';
+ document.getElementById('produk').scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();active='Semua';apply();});
+document.querySelectorAll('.cat-card').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;apply();}));
+</script>
+</body></html>
