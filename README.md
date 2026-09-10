@@ -1,17 +1,13 @@
-# RACUNIN FINAL
+# RACUNIN — GitHub Pages Standalone
 
-Versi final static website Shopee Affiliate untuk GitHub Pages.
+Versi ini sengaja dibuat **hanya dengan 1 file `index.html`** supaya tidak ada masalah CSS/assets yang hilang saat upload lewat GitHub.
 
-## Isi
-- 100 produk dari file export affiliate pengguna
-- Nama produk, harga, penjualan, toko, komisi, dan link affiliate mengikuti katalog
-- Kategori otomatis berdasarkan nama produk: Body Care, Hair Care, Makeup, Parfum, Personal Care, Skincare
-- Pencarian dan filter kategori
-- Halaman detail unik untuk setiap produk
-- Gambar visual ringan berbasis SVG sebagai placeholder/visual katalog (bukan foto resmi seller)
-- `robots.txt` dan `sitemap.xml`
-- Artikel pendukung SEO
+## Cara pasang
+1. Buka repository `kalima112/racunin`.
+2. Ganti `index.html` lama dengan `index.html` dari folder ini.
+3. Commit changes.
+4. Tunggu GitHub Pages selesai deploy, lalu hard refresh (Ctrl+F5).
 
-## Deploy
-Upload seluruh isi folder ini ke repository GitHub Pages `kalima112/racunin`.
-Pastikan `index.html` berada di root repository.
+Tidak perlu upload folder `assets/`, `kategori/`, atau `produk/` untuk versi ini.
+
+Catatan: visual produk di versi ini adalah visual generik inline, bukan foto resmi Shopee. Link tombol **CEK DI SHOPEE** tetap menggunakan link affiliate dari katalog.
