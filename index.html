@@ -3,1695 +3,1337 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RACUNIN — Barang bagus yang bikin susah bilang nggak</title>
-<meta name="description" content="RACUNIN adalah katalog pilihan produk Shopee dari katalog affiliate: skincare, makeup, parfum, hair care, body care, dan personal care.">
+<title>RACUNIN — Temuan yang worth it</title>
+<meta name="description" content="RACUNIN — pilihan produk affiliate yang dikurasi berdasarkan katalog kamu.">
 <style>
-:root{--bg:#fffaf5;--ink:#181512;--muted:#746d66;--line:#eadfd5;--accent:#ff5b35;--soft:#fff0e9;--white:#fff;--shadow:0 18px 50px rgba(24,21,18,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(255,250,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:25px;font-weight:1000;letter-spacing:-1.5px}.logo span{color:var(--accent)}nav{display:flex;gap:20px;align-items:center;font-size:14px;font-weight:800}nav a:hover{color:var(--accent)}.nav-btn{background:var(--ink);color:#fff;padding:11px 16px;border-radius:12px}
-.hero{padding:70px 0 55px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;background:var(--soft);color:#d94e2e;padding:9px 14px;border-radius:999px;font-weight:900;font-size:13px}
-h1{font-size:clamp(46px,6.7vw,82px);line-height:.94;letter-spacing:-5px;margin:20px 0}.lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:700px}
-.hero-panel{background:var(--ink);color:#fff;border-radius:30px;padding:30px;min-height:320px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}.hero-panel .big{font-size:72px}.hero-panel h2{font-size:30px;margin:10px 0 5px}.hero-panel p{color:#ddd;line-height:1.6;margin:0}
-.searchbox{display:flex;background:#fff;border:1px solid var(--line);padding:6px;border-radius:17px;margin-top:26px;box-shadow:var(--shadow)}.searchbox input{flex:1;border:0;outline:0;padding:14px;font-size:16px;background:transparent}.searchbox button{border:0;background:var(--ink);color:#fff;border-radius:12px;padding:0 20px;font-weight:900;cursor:pointer}
-.section{padding:30px 0 70px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}h2{font-size:32px;letter-spacing:-1.5px;margin:0}.muted{color:var(--muted)}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.category-card{position:relative;border:1px solid var(--line);padding:0;overflow:hidden;border-radius:24px;background:#fff;cursor:pointer;text-align:left;min-height:220px;box-shadow:0 10px 35px rgba(24,21,18,.05)}.category-card img{width:100%;height:220px;object-fit:cover;display:block}.cat-overlay{position:absolute;inset:auto 10px 10px 10px;border-radius:18px;padding:15px 16px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center}.cat-overlay span{font-size:23px;margin-right:8px}.cat-overlay b{font-size:18px}.cat-overlay small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.cat-overlay i{font-size:24px}
-.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 25px}.chip{border:1px solid var(--line);background:#fff;padding:10px 15px;border-radius:999px;font-weight:850;cursor:pointer}.chip.active,.chip:hover{background:var(--ink);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-visual{height:210px;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;overflow:hidden}.product-visual:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.5)}.visual-emoji{font-size:74px;z-index:1}.product-visual span{z-index:1;font-weight:900;font-size:12px;margin-top:6px;background:#fff;padding:6px 9px;border-radius:999px}.skincare{background:#f4e3d3}.makeup{background:#f7dce5}.parfum{background:#eee3c8}.hair-care{background:#dfe9dc}.personal-care{background:#dce9ee}.body-care{background:#f0dfd5}
-.pc-body{padding:15px;display:flex;flex-direction:column;flex:1}.cat-label{font-size:10px;color:var(--accent);font-weight:950;text-transform:uppercase}.product-card h3{font-size:15px;line-height:1.32;margin:7px 0 9px}.shop{font-size:11px;color:var(--muted);min-height:32px}.pc-bottom{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:10px;font-size:11px}.pc-bottom strong{font-size:15px}.buy{display:block;text-align:center;background:var(--accent);color:#fff;border-radius:11px;padding:11px 8px;margin-top:13px;font-size:11px;font-weight:950}
-.notice{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 20px;color:var(--muted);font-size:13px;line-height:1.6}.empty{display:none;padding:45px;text-align:center;border:1px dashed var(--line);border-radius:20px;background:#fff}
-footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:13px;margin-top:30px}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}nav a:not(.nav-btn){display:none}}
-@media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.hero{padding-top:45px}h1{letter-spacing:-3px}.grid,.categories{grid-template-columns:1fr}.product-visual{height:190px}.nav-btn{padding:9px 12px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f7f4ef;color:#171513;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+main{max-width:1180px;margin:auto;padding:42px 22px 90px}
+.hero{padding:20px 0 34px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:end}
+.kicker{display:inline-flex;padding:9px 13px;border-radius:999px;background:#ffe9dc;color:#df4e21;font-weight:800;font-size:13px}
+h1{font-size:clamp(48px,7vw,88px);line-height:.9;letter-spacing:-.055em;margin:22px 0 18px;max-width:820px}
+.hero p{font-size:18px;line-height:1.65;color:#716a63;max-width:700px;margin:0}
+.hero-note{background:#191715;color:#fff;border-radius:28px;padding:28px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-note .emoji{font-size:48px;margin-bottom:auto}
+.hero-note h2{font-size:25px;margin:0 0 8px}
+.hero-note p{color:#d6d0ca;font-size:14px}
+.nav{display:flex;gap:10px;flex-wrap:wrap;padding:8px 0 34px}
+.nav a{text-decoration:none;background:#fff;border:1px solid #e7e0d7;padding:11px 15px;border-radius:999px;font-weight:750;font-size:14px}
+.category{margin-top:30px}
+.category-visual{height:260px;border-radius:30px;overflow:hidden;position:relative;background:#ded7ce}
+.category-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.visual-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08))}
+.visual-copy{position:absolute;left:30px;bottom:28px;color:#fff}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:8px}
+.visual-copy h2{font-size:42px;letter-spacing:-.04em;margin:0}
+.visual-copy p{margin:5px 0 0;color:#eee;font-size:13px}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.product{background:#fff;border:1px solid #e8e1d9;border-radius:22px;padding:20px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.product:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(37,29,22,.08)}
+.product-top{display:flex;justify-content:space-between;align-items:center}
+.mini-cat{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#d7542b}
+.arrow{font-size:22px}
+.product h3{font-size:18px;line-height:1.28;letter-spacing:-.02em;margin:22px 0 20px}
+.meta{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:13px}
+.meta strong{font-size:19px}
+.meta span{color:#77706a}
+.shop{margin-top:13px;color:#77706a;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.footer{padding:55px 0 0;text-align:center;color:#8a8178;font-size:13px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){main{padding:26px 14px 70px}.hero{padding-top:8px}h1{font-size:50px}.hero-note{min-height:180px}.products{grid-template-columns:1fr}.category-visual{height:220px}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#top">RACUN<span>IN</span> 👀</a><nav><a href="#kategori">Kategori</a><a href="#produk">Produk</a><a href="#tentang">Tentang</a><a class="nav-btn" href="#produk">Lihat pilihan</a></nav></div></header>
-
-<main id="top">
-<section class="hero"><div class="wrap hero-grid">
-<div><span class="eyebrow">✨ Temuan yang worth it</span><h1>Barang bagus yang bikin susah bilang “nggak”.</h1><p class="lead">RACUNIN menyusun katalog affiliate kamu supaya lebih enak dilihat, gampang dicari, dan langsung nyambung ke produk Shopee.</p>
-<div class="searchbox"><input id="search" placeholder="Cari parfum, sunscreen, lip cream, sabun..." autocomplete="off"><button onclick="filterProducts()">Cari</button></div></div>
-<div class="hero-panel"><div class="big">🛒✨</div><div><h2>Checkout dengan otak.</h2><p>Nama produk, harga, toko, penjualan, dan link affiliate berasal dari katalog yang kamu berikan.</p></div></div>
-</div></section>
-
-<section class="section" id="kategori"><div class="wrap"><div class="section-title"><div><h2>🔥 Pilih kategori</h2><p class="muted">Gambar di sini hanya sebagai pemanis visual kategori.</p></div></div><div class="categories">
-    <button class="category-card" onclick="setCategory('Skincare')">
-      <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Ilustrasi Skincare" loading="lazy">
-      <div class="cat-overlay"><div><span>🧴</span><b>Skincare</b><small>19 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button>
-    <button class="category-card" onclick="setCategory('Makeup')">
-      <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Ilustrasi Makeup" loading="lazy">
-      <div class="cat-overlay"><div><span>💄</span><b>Makeup</b><small>27 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button>
-    <button class="category-card" onclick="setCategory('Parfum')">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&s=10" alt="Ilustrasi Parfum" loading="lazy">
-      <div class="cat-overlay"><div><span>🌸</span><b>Parfum</b><small>18 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button>
-    <button class="category-card" onclick="setCategory('Hair Care')">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtvoNH5esjE63sXEoSRDNqHXaaBLOpKxxl7vBYkWHeg&s=10" alt="Ilustrasi Hair Care" loading="lazy">
-      <div class="cat-overlay"><div><span>💇</span><b>Hair Care</b><small>3 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button>
-    <button class="category-card" onclick="setCategory('Personal Care')">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&s=10" alt="Ilustrasi Personal Care" loading="lazy">
-      <div class="cat-overlay"><div><span>🧼</span><b>Personal Care</b><small>14 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button>
-    <button class="category-card" onclick="setCategory('Body Care')">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&s=10" alt="Ilustrasi Body Care" loading="lazy">
-      <div class="cat-overlay"><div><span>🫧</span><b>Body Care</b><small>19 produk · gambar hanya pemanis</small></div><i>→</i></div>
-    </button></div></div></section>
-
-<section class="section" id="produk"><div class="wrap"><div class="section-title"><div><h2>🛍️ Pilihan produk</h2><p class="muted">100 produk dari katalog affiliate kamu.</p></div></div>
-<div class="filters"><button class="chip active" data-filter="Semua" onclick="setCategory('Semua')">Semua</button><button class="chip" data-filter="Skincare" onclick="setCategory('Skincare')">🧴 Skincare</button><button class="chip" data-filter="Makeup" onclick="setCategory('Makeup')">💄 Makeup</button><button class="chip" data-filter="Parfum" onclick="setCategory('Parfum')">🌸 Parfum</button><button class="chip" data-filter="Hair Care" onclick="setCategory('Hair Care')">💇 Hair Care</button><button class="chip" data-filter="Personal Care" onclick="setCategory('Personal Care')">🧼 Personal Care</button><button class="chip" data-filter="Body Care" onclick="setCategory('Body Care')">🫧 Body Care</button></div>
-<div class="grid" id="product-grid">
-    <article class="product-card" data-cat="Body Care" data-search="nuvo sabun mandi cair pump 500ml grtais nuvo refill 400ml body care desan store27">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Nuvo Sabun Mandi Cair Pump 500ml GRTAIS Nuvo Refill 400ml</h3>
-        <div class="shop">🏪 DESAN STORE27</div>
-        <div class="pc-bottom">
-          <strong>38,0RB</strong>
-          <span>🔥 198 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8fSG6FqEIu" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="{terlaris no 1} insspired octarine parfume edp parfumtahanlama|parfumpria|parfumwanita|parfumunisex|parfumtraveling decant parfum autocarestore">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>{TERLARIS NO 1} INSSPIRED OCTARINE PARFUME EDP PARFUMTAHANLAMA|PARFUMPRIA|PARFUMWANITA|PARFUMUNISEX|PARFUMTRAVELING DECANT</h3>
-        <div class="shop">🏪 Autocarestore</div>
-        <div class="pc-bottom">
-          <strong>18,0RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8plgIYpaxx" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="g2g lip serum glad2glow brightening lip serum mencerahkan bibir with vitamin e skincare saysalamshop">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>G2G Lip Serum GLAD2GLOW BRIGHTENING LIP SERUM Mencerahkan Bibir with Vitamin E</h3>
-        <div class="shop">🏪 saysalamshop</div>
-        <div class="pc-bottom">
-          <strong>22,5RB</strong>
-          <span>🔥 149 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9056Uroxd0" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="[3pcs] kahf face wash skin energizing &amp; brightening 100ml (triple pack) skincare cozme official ✅">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>[3PCS] KAHF Face Wash Skin Energizing &amp; Brightening 100mL (Triple Pack)</h3>
-        <div class="shop">🏪 COZME Official ✅</div>
-        <div class="pc-bottom">
-          <strong>123,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9AOWhAoKI3" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="white inc alpha glowhite &amp; retinol white body lotion - mencerahkan &amp; melembapkan kulit body care ae`ra skin">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>White Inc Alpha Glowhite &amp; Retinol White Body Lotion - Mencerahkan &amp; Melembapkan Kulit</h3>
-        <div class="shop">🏪 Ae`ra Skin</div>
-        <div class="pc-bottom">
-          <strong>5,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1LffMmI9BY" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="[beli 2 gratis 1] decant mykonos original 3ml 5ml 10ml | parfum original pria wanita | free tester | parfum unisex parfum aflah.scent">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>[BELI 2 GRATIS 1] Decant Mykonos Original 3ml 5ml 10ml | Parfum Original Pria Wanita | Free Tester | Parfum Unisex</h3>
-        <div class="shop">🏪 Aflah.scent</div>
-        <div class="pc-bottom">
-          <strong>17,3RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1Vz5Z5HVqb" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="( harga grosir ) fress batang sabun wangi batang fress macaron, cotton, green mirage fress sabun harga batangan personal care lapak_tokokku">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>( HARGA GROSIR ) FRESS BATANG sabun wangi batang Fress macaron, cotton, green Mirage Fress sabun Harga Batangan</h3>
-        <div class="shop">🏪 Lapak_Tokokku</div>
-        <div class="pc-bottom">
-          <strong>2,2RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1gIVlOGsVe" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="cermin rias makeup lucu gaya kartun standing mirror minimalis dekorasi kaca meja aesthetic makeup oura accessories">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Cermin Rias Makeup Lucu Gaya Kartun Standing Mirror Minimalis Dekorasi Kaca Meja Aesthetic</h3>
-        <div class="shop">🏪 Oura Accessories</div>
-        <div class="pc-bottom">
-          <strong>27,9RB</strong>
-          <span>🔥 1RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1qbvxhGFAh" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="ms glow - facial wash super clean - 100 ml skincare ms glow beauty official store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>MS GLOW - FACIAL WASH SUPER CLEAN - 100 ML</h3>
-        <div class="shop">🏪 MS Glow Beauty Official Store</div>
-        <div class="pc-bottom">
-          <strong>59,5RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/20vMA0Fbpk" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="(buy 1 get 1) scarlite perfume unisex 30ml parfum eterna.id">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>(Buy 1 Get 1) Scarlite Perfume Unisex 30ml</h3>
-        <div class="shop">🏪 Eterna.Id</div>
-        <div class="pc-bottom">
-          <strong>13,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2BEmMJEyUn" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="g2g lip serum - glad2glow lip brightening serum 7g - mencerahkan, melembapkan, dan beri warna dengan tekstur ringan skincare saysalamshop">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>G2G Lip serum - Glad2Glow Lip Brightening Serum 7g - Mencerahkan, Melembapkan, dan Beri Warna dengan Tekstur Ringan</h3>
-        <div class="shop">🏪 saysalamshop</div>
-        <div class="pc-bottom">
-          <strong>23,5RB</strong>
-          <span>🔥 63 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2LYCYcEL9q" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="[kooko] 13pcs soft kuas makeup set kosmetic brushes powder eye shadow blusher kuas with pouch - 7001 makeup kooko">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>[KOOKO] 13pcs Soft Kuas Makeup Set Kosmetic Brushes Powder Eye Shadow Blusher Kuas With Pouch - 7001</h3>
-        <div class="shop">🏪 Kooko</div>
-        <div class="pc-bottom">
-          <strong>15,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2VrckvDhot" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="( harga grosir )  500ml hanbody lovely jumbo emeron lovely handbody 500ml ready banyak varian, jeju, white pearl, almond, radiant, &amp; bengkoang. kemasan baru 500ml body care lapak_tokokku">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>( HARGA GROSIR )  500ML HANBODY LOVELY JUMBO EMERON LOVELY HANDBODY 500ML Ready Banyak Varian, Jeju, White Pearl, Almond, Radiant, &amp; Bengkoang. Kemasan Baru 500ml</h3>
-        <div class="shop">🏪 Lapak_Tokokku</div>
-        <div class="pc-bottom">
-          <strong>9,0RB</strong>
-          <span>🔥 220 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1AHmKNDtQ" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="mykonos all varian decant | 3ml 5ml 10ml original share in jar personal care decant by society">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>MYKONOS ALL VARIAN DECANT | 3ml 5ml 10ml ORIGINAL SHARE IN JAR</h3>
-        <div class="shop">🏪 Decant by society</div>
-        <div class="pc-bottom">
-          <strong>22,9RB</strong>
-          <span>🔥 6RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/BThydMaYT" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="implora day to day two way cake | bedak ringan &amp; samarkan pori makeup implora official shop">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Implora Day To Day Two Way Cake | Bedak Ringan &amp; Samarkan Pori</h3>
-        <div class="shop">🏪 Implora Official Shop</div>
-        <div class="pc-bottom">
-          <strong>23,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/Ln8AwLxDW" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="eyeshadow stick 3 warna gradasi multifungsi shimmer waterproof long lasting tahan lama tahan air makeup makeup meet beauty">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Eyeshadow Stick 3 Warna Gradasi Multifungsi Shimmer Waterproof Long Lasting Tahan Lama Tahan Air Makeup</h3>
-        <div class="shop">🏪 Meet Beauty</div>
-        <div class="pc-bottom">
-          <strong>34,9RB</strong>
-          <span>🔥 9RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/W6YNFLJsZ" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="inai kuku for muslimah kutek kuku halal sah untuk sholat tahan lama personal care cacashop85">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>Inai Kuku For muslimah kutek kuku Halal Sah Untuk Sholat Tahan Lama</h3>
-        <div class="shop">🏪 CACASHOP85</div>
-        <div class="pc-bottom">
-          <strong>7,3RB</strong>
-          <span>🔥 5RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/gPyZYKgXc" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="parfum scarlet extrait eau de parfum 30 ml | parfum wangi tahan lama | parfum unisex parfum nurr aroma">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>PARFUM SCARLET EXTRAIT EAU DE PARFUM 30 ML | PARFUM Wangi Tahan Lama | Parfum Unisex</h3>
-        <div class="shop">🏪 Nurr aroma</div>
-        <div class="pc-bottom">
-          <strong>10,0RB</strong>
-          <span>🔥 1RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/qjOlrK3Cf" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="sabun giv batang 72gr ( cek variasi ) personal care faikshopjember">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>Sabun GIV Batang 72gr ( Cek Variasi )</h3>
-        <div class="shop">🏪 FAIKSHOPJEMBER</div>
-        <div class="pc-bottom">
-          <strong>14,3RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/112oyAJPri" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="[ori bpom] kahf face wash 100ml | sabun pembersih wajah pria | gentle exfoliating | face scrub skincare celeste.store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>[ORI BPOM] KAHF Face Wash 100ml | Sabun Pembersih Wajah Pria | Gentle Exfoliating | Face Scrub</h3>
-        <div class="shop">🏪 CELESTE.STORE</div>
-        <div class="pc-bottom">
-          <strong>38,0RB</strong>
-          <span>🔥 1RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1BMFATImWl" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="paket 18 pcs sabun mandi shinzui skin lightening 60gr - mencerahkan kulit, menjaga kelembapan, aroma menenangkan body care olime official shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Paket 18 pcs Sabun Mandi Shinzui Skin Lightening 60gr - Mencerahkan Kulit, Menjaga Kelembapan, Aroma Menenangkan</h3>
-        <div class="shop">🏪 OLIME Official Shop</div>
-        <div class="pc-bottom">
-          <strong>25,7RB</strong>
-          <span>🔥 8 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/40gQXg7zmK" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="[terlaris]  scarlett inspired edp &amp; extrait de parfum 30ml wangi tahan lama - parfum autocarestore">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>[TERLARIS]  SCARLETT Inspired EDP &amp; Extrait De Parfum 30ml Wangi Tahan Lama -</h3>
-        <div class="shop">🏪 Autocarestore</div>
-        <div class="pc-bottom">
-          <strong>12,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4Azqjz7MRN" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="bpom gloow&amp;be glass skin sunscreen glowing hybrid tone up no effort spf 40 pa+++ 50ml - narcisse skincare narcisse">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>BPOM Gloow&amp;be Glass Skin Sunscreen Glowing Hybrid Tone Up No Effort SPF 40 PA+++ 50ml - Narcisse</h3>
-        <div class="shop">🏪 Narcisse</div>
-        <div class="pc-bottom">
-          <strong>39,9RB</strong>
-          <span>🔥 3RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4LJGwI6j6Q" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="lipcream omg matte kiss clearence sale makeup caca solo">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>lipcream OMG matte kiss clearence sale</h3>
-        <div class="shop">🏪 caca solo</div>
-        <div class="pc-bottom">
-          <strong>11,9RB</strong>
-          <span>🔥 4RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4Vch8b65lT" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="lovely naturals body serum original jumbo besar 400ml body care faiz cosmetik &amp; accesoris">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Lovely Naturals Body Serum Original Jumbo Besar 400ml</h3>
-        <div class="shop">🏪 Faiz Cosmetik &amp; Accesoris</div>
-        <div class="pc-bottom">
-          <strong>10,8RB</strong>
-          <span>🔥 146 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4fw7Ku5SQW" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="parfum mix d&#x27;nhill x scandalush beli 1 dapat 3 eau de parfume unisex tahan lama 12 jam parfum rumahparfume.id">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>Parfum Mix D&#x27;nhill X Scandalush Beli 1 Dapat 3 Eau De Parfume Unisex Tahan Lama 12 Jam</h3>
-        <div class="shop">🏪 Rumahparfume.id</div>
-        <div class="pc-bottom">
-          <strong>12,0RB</strong>
-          <span>🔥 9RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4qFXXD4p5Z" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="glad2glow facial cleanser blueberry ceramide low ph face gel cleanser 70ml pembersih wajah pembersih muka | deep pore cleanser volcanic ash | yuzu vitamin c | acne gel cleanser skincare dewskinstudio.id">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Glad2Glow Facial Cleanser Blueberry Ceramide Low pH Face Gel Cleanser 70ml Pembersih Wajah Pembersih Muka | Deep Pore Cleanser Volcanic Ash | Yuzu Vitamin C | Acne gel cleanser</h3>
-        <div class="shop">🏪 DewSkinStudio.id</div>
-        <div class="pc-bottom">
-          <strong>24,5RB</strong>
-          <span>🔥 457 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/50YxjW4Bkc" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="cermin bunga standing mirror makeup rotating cermin aesthetic | stand mirorr flower kaca meja rias serbaguna makeup supplier termurah official">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Cermin Bunga Standing Mirror Makeup Rotating Cermin Aesthetic | Stand Mirorr Flower Kaca Meja Rias Serbaguna</h3>
-        <div class="shop">🏪 Supplier Termurah Official</div>
-        <div class="pc-bottom">
-          <strong>8,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5AsNvp3YPf" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="12pcs sabun giv batang 72gr promo murah random personal care diffanibeautystore">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>12Pcs Sabun GIV Batang 72gr PROMO Murah Random</h3>
-        <div class="shop">🏪 DiffaniBeautyStore</div>
-        <div class="pc-bottom">
-          <strong>14,0RB</strong>
-          <span>🔥 984 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2gB2xED4UC" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="pucelle eau de luxe parfum 50ml wanita multitalenta parfum harumearoma">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>Pucelle Eau De Luxe Parfum 50ml Wanita Multitalenta</h3>
-        <div class="shop">🏪 HarumeAroma</div>
-        <div class="pc-bottom">
-          <strong>8,0RB</strong>
-          <span>🔥 334 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2qUT9XCR9F" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="inaikuku muslimah by lubaba henna halal bpom personal care zaaraaa23">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>INAIKUKU MUSLIMAH BY LUBABA HENNA HALAL BPOM</h3>
-        <div class="shop">🏪 Zaaraaa23</div>
-        <div class="pc-bottom">
-          <strong>8,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/30ntLqBnoI" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="eyeshadow stick 3 warna gradasi shimmer pigmented waterproof tahan lama mudah dibaurkan sekali oles untuk pemula makeup seelight beauty store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Eyeshadow Stick 3 Warna Gradasi Shimmer Pigmented Waterproof Tahan Lama Mudah Dibaurkan Sekali Oles Untuk Pemula</h3>
-        <div class="shop">🏪 SeeLight Beauty Store</div>
-        <div class="pc-bottom">
-          <strong>35,3RB</strong>
-          <span>🔥 597 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3B7JY9BATL" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="white inc alpha glowhite 100 ml body lotion whitening menghidrasi kulit | tester | mencerahkan memutihkan body care @family-1@">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>WHITE INC Alpha Glowhite 100 ml Body Lotion Whitening Menghidrasi Kulit | Tester | Mencerahkan memutihkan</h3>
-        <div class="shop">🏪 @FAMILY-1@</div>
-        <div class="pc-bottom">
-          <strong>6,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3LQjkSAX8O" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="parfum scarlett eau de parfum 30ml - aroma mewah, desain portabel, pilihan varian parfum scentedblish_">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>Parfum Scarlett Eau De Parfum 30ml - Aroma Mewah, Desain Portabel, Pilihan Varian</h3>
-        <div class="shop">🏪 ScentedBlish_</div>
-        <div class="pc-bottom">
-          <strong>8,8RB</strong>
-          <span>🔥 3RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3Vk9wl9tnR" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="drve paket bundling 6in1 mengandung niacinamideanti  aging brightening  membantu mengurangi tanda-tanda penuaan dini dan membantu menjaga kelembapan kulit sepanjang hari acne treatment  glowing set skincare drve official store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Drve paket bundling 6in1 mengandung NiacinamideAnti  Aging Brightening  Membantu mengurangi tanda-tanda penuaan dini dan membantu menjaga kelembapan kulit sepanjang hari Acne Treatment  Glowing Set</h3>
-        <div class="shop">🏪 Drve Official Store</div>
-        <div class="pc-bottom">
-          <strong>153,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3g3a949GSU" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="collagen foot cream 60g krim kaki pecah dan kering dan kasar ampuh foot cream 100% original perbaikan anti kering retak perawatan kulit - mencegah kekeringan mencegah kaki retak krim pelembab dalam krim perawatan kaki krim tumit kaki kapalan pecah kasar personal care healthcare doctor">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>Collagen Foot Cream 60g Krim Kaki Pecah Dan Kering Dan Kasar Ampuh foot cream 100% Original Perbaikan Anti Kering Retak Perawatan Kulit - Mencegah Kekeringan Mencegah Kaki Retak Krim Pelembab Dalam Krim Perawatan Kaki Krim Tumit Kaki Kapalan Pecah Kasar</h3>
-        <div class="shop">🏪 healthcare doctor</div>
-        <div class="pc-bottom">
-          <strong>17,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3qN0LN8d7X" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="white inc alpha glow white body lotion whitening &amp; moisturizing | body cream body lotion menghidrasi kulit body care pemula.id">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
-        <div class="shop">🏪 pemula.id</div>
-        <div class="pc-bottom">
-          <strong>5,0RB</strong>
-          <span>🔥 1RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/7AdSJUvwMC" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="scarlett eau de perfume &amp; extrait de perfume 30ml - all variant parfum finishshop.co">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>Scarlett Eau De Perfume &amp; Extrait De Perfume 30ml - All Variant</h3>
-        <div class="shop">🏪 finishshop.co</div>
-        <div class="pc-bottom">
-          <strong>9,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/70K27BwZhB" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Hair Care" data-search="shampo sachet zinc kemasan renceng isi 24 pcs murah hair care toko@himmah">
-      <div class="product-visual hair-care">
-        <div class="visual-emoji">💇</div>
-        <span>Hair Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Hair Care</div>
-        <h3>shampo sachet zinc kemasan renceng isi 24 pcs murah</h3>
-        <div class="shop">🏪 toko@himmah</div>
-        <div class="pc-bottom">
-          <strong>5,8RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/6q0busxD2A" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="omg oh my glam matte kiss lip cream ombre oh my glam lipstik makeup arfiz olshop">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>OMG OH MY GLAM MATTE Kiss Lip Cream OMBRE OH MY GLAM LIPSTIK</h3>
-        <div class="shop">🏪 Arfiz Olshop</div>
-        <div class="pc-bottom">
-          <strong>10,2RB</strong>
-          <span>🔥 956 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/6fhBiZxqN9" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="paket hemat 2 pcs pepsodent strong + 3 pcs sabun dettol personal care zz perfume">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>PAKET HEMAT 2 PCS PEPSODENT STRONG + 3 PCS SABUN DETTOL</h3>
-        <div class="shop">🏪 ZZ Perfume</div>
-        <div class="pc-bottom">
-          <strong>25,6RB</strong>
-          <span>🔥 3RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/7pt96itP0O" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="gumiho | bulu mata palsu 10-12mm length 10 baris trilogy bulu mata palus 3d natural bulmat eyelash extension perlu lem lentik mlen (tidak termasuk lem) makeup holo cos store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>GUMIHO | BULU MATA PALSU 10-12mm Length 10 BARIS Trilogy Bulu Mata Palus 3D Natural bulmat eyelash extension Perlu Lem Lentik Mlen (tidak termasuk lem)</h3>
-        <div class="shop">🏪 HOLO Cos Store</div>
-        <div class="pc-bottom">
-          <strong>16,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/7fZiuPu2LN" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="dazzle me ink-gloss lip tint lip gloss tahan lama glossy dan plumpy finish waterproof stained high pigmented makeup twiebeauty">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>DAZZLE ME INK-GLOSS Lip Tint Lip Gloss Tahan Lama Glossy dan Plumpy Finish Waterproof Stained High Pigmented</h3>
-        <div class="shop">🏪 twiebeauty</div>
-        <div class="pc-bottom">
-          <strong>21,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/7VGIi6ufgM" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="[bpom] lubaba henna\ inai kuku halal sah solat/warna tahan lama dan pekat personal care er.mart">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>[BPOM] LUBABA HENNA\ INAI KUKU HALAL SAH SOLAT/WARNA TAHAN LAMA DAN PEKAT</h3>
-        <div class="shop">🏪 ER.mart</div>
-        <div class="pc-bottom">
-          <strong>8,0RB</strong>
-          <span>🔥 6RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/7KwsVnvJ1L" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="paket hemat 3 parfum premium 100ml parfum perfume indo store">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>PAKET HEMAT 3 PARFUM PREMIUM 100ML</h3>
-        <div class="shop">🏪 Perfume Indo Store</div>
-        <div class="pc-bottom">
-          <strong>14,7RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5q84j31144" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="jetzky -  bulu mata palsu eyelash extension natural aksesoris make up daily riasan mata korean beauty premium makeup jetzky.store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>JETZKY -  Bulu Mata Palsu Eyelash Extension Natural Aksesoris Make Up Daily Riasan Mata Korean Beauty Premium</h3>
-        <div class="shop">🏪 jetzky.store</div>
-        <div class="pc-bottom">
-          <strong>5,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5foeWk1eP3" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="lipstik batang sensational colour matte tahan lama personal care toko_cantik ku">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>Lipstik Batang Sensational Colour Matte Tahan Lama</h3>
-        <div class="shop">🏪 Toko_Cantik ku</div>
-        <div class="pc-bottom">
-          <strong>10,0RB</strong>
-          <span>🔥 5RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5VVEKR2Hk2" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="white inc alpha glowhite body lotion  mencerahkan kulit  - 100ml  dengan kandungan alpha arbutin &amp; 10 whitening agent body care toko kosmetik shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>White Inc Alpha Glowhite Body Lotion  Mencerahkan Kulit  - 100ml  Dengan Kandungan Alpha Arbutin &amp; 10 Whitening Agent</h3>
-        <div class="shop">🏪 Toko kosmetik shop</div>
-        <div class="pc-bottom">
-          <strong>5,5RB</strong>
-          <span>🔥 3RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5LBo882v51" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="[mix 3 parfum - bebas pilih varian] scarlett eau de parfum &amp; extrait de parfum 30ml wangi tahan lama - wangi mewah parfum scarlett whitening official shop">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>[MIX 3 PARFUM - BEBAS PILIH VARIAN] SCARLETT Eau De Parfum &amp; Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah</h3>
-        <div class="shop">🏪 Scarlett Whitening Official Shop</div>
-        <div class="pc-bottom">
-          <strong>64,5RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/6VNlWGyTiG" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="lestari butik - puffy pouch polkadot kecil list navy - ribbon navy - cute pouch - makeup pouch -puffy pouch makeup polkadot ribbon navy makeup butik lestari">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Lestari Butik - Puffy pouch polkadot kecil list navy - ribbon navy - cute pouch - makeup pouch -puffy pouch makeup polkadot ribbon navy</h3>
-        <div class="shop">🏪 butik lestari</div>
-        <div class="pc-bottom">
-          <strong>14,0RB</strong>
-          <span>🔥 124 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/6L4LJxz73F" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="glad2glow perfect cover cushion foundation waterproof make up setting concealer bb cream tahan lama hingga 12 jam hasil akhir makeup kliki beauty">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Glad2Glow Perfect Cover Cushion Foundation Waterproof Make Up Setting Concealer BB Cream Tahan Lama Hingga 12 Jam Hasil Akhir</h3>
-        <div class="shop">🏪 Kliki Beauty</div>
-        <div class="pc-bottom">
-          <strong>60,5RB</strong>
-          <span>🔥 3RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/6Akv7ezkOE" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="nivea body lotion daily protection sun spf 33 100ml | merah jingga official body care merah jingga official store">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Nivea Body Lotion Daily Protection Sun spf 33 100ml | Merah Jingga Official</h3>
-        <div class="shop">🏪 Merah Jingga Official Store</div>
-        <div class="pc-bottom">
-          <strong>30,5RB</strong>
-          <span>🔥 9RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/60RUvM0NjD" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="pigeon teens paket lengkap skincare kulit glowing kulit kusam kulit mencerahkan kulit berjerawat skincare newtokotoko">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Pigeon Teens Paket Lengkap Skincare Kulit Glowing Kulit Kusam Kulit Mencerahkan Kulit Berjerawat</h3>
-        <div class="shop">🏪 NewTokoToko</div>
-        <div class="pc-bottom">
-          <strong>71,9RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9peDUOlmwy" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="birth of venus parfum cowok premium extrait de parfum 100ml tahan lama parfum royale sanctiors">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>BIRTH OF VENUS Parfum Cowok Premium Extrait De Parfum 100ML TAHAN LAMA</h3>
-        <div class="shop">🏪 ROYALE SANCTIORS</div>
-        <div class="pc-bottom">
-          <strong>175,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9fKnI5mQHx" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="azzura liptint - hydrating color stain smooth glossy plumpy longlasting makeup wings official shop">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Azzura Liptint - Hydrating Color Stain Smooth Glossy Plumpy Longlasting</h3>
-        <div class="shop">🏪 Wings Official Shop</div>
-        <div class="pc-bottom">
-          <strong>30,5RB</strong>
-          <span>🔥 4RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9V1N5mn3cw" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="glow &amp; lovely sabun mandi cair refill 800ml body care desan store27">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Glow &amp; Lovely Sabun Mandi Cair Refill 800ml</h3>
-        <div class="shop">🏪 DESAN STORE27</div>
-        <div class="pc-bottom">
-          <strong>22,0RB</strong>
-          <span>🔥 102 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9KhwtTngxv" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Hair Care" data-search="[ bpom &amp; halal ] shampo kemiri penumbuh rambut cepat anti ketombe penghilang uban dan rontok - 500ml terlaris &amp; viral hair care anythingshop.id">
-      <div class="product-visual hair-care">
-        <div class="visual-emoji">💇</div>
-        <span>Hair Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Hair Care</div>
-        <h3>[ BPOM &amp; HALAL ] Shampo Kemiri Penumbuh Rambut Cepat Anti Ketombe Penghilang Uban dan Rontok - 500ml TERLARIS &amp; VIRAL</h3>
-        <div class="shop">🏪 AnythingShop.id</div>
-        <div class="pc-bottom">
-          <strong>38,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/AUtuHcjFbA" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="brush cleanser spray omg.itsfresh termurah makeup d&amp;gbeautyshop">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>BRUSH CLEANSER SPRAY OMG.ITSFRESH TERMURAH</h3>
-        <div class="shop">🏪 D&amp;GBeautyshop</div>
-        <div class="pc-bottom">
-          <strong>34,0RB</strong>
-          <span>🔥 24 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/AKaU5Jjsw9" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="maange creamy blush on stick multi-use high pigmented long-lasting light nutrual face makeup mg-f03 makeup maange official store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>MAANGE Creamy Blush On Stick Multi-Use High Pigmented Long-lasting Light Nutrual Face Makeup MG-F03</h3>
-        <div class="shop">🏪 MAANGE Official Store</div>
-        <div class="pc-bottom">
-          <strong>41,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/AAH3t0kWH8" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="promo dapat 3 parfum box premium sparkling series scentpro parfum pemikat parfum pria wanita parfum semarmesem19">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>PROMO DAPAT 3 PARFUM BOX PREMIUM SPARKLING SERIES SCENTPRO PARFUM PEMIKAT PARFUM PRIA WANITA</h3>
-        <div class="shop">🏪 Semarmesem19</div>
-        <div class="pc-bottom">
-          <strong>44,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9zxdghl9c7" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="parfum dunhil blue || parfum pria fresh tahan lama || parfum pria || parfum cowok tahan lama 30ml parfum youme.scent">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>PARFUM DUNHIL BLUE || PARFUM PRIA FRESH TAHAN LAMA || PARFUM PRIA || PARFUM COWOK TAHAN LAMA 30ML</h3>
-        <div class="shop">🏪 Youme.scent</div>
-        <div class="pc-bottom">
-          <strong>19,2RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8V8ptwqreq" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="vaseline soft glow gluta vitamin body serum spf20 dengan niacinamide - body serum untuk perlindungan uv, kulit cerah &amp; lembap 100ml body care unilever beauty shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Vaseline Soft Glow Gluta Vitamin Body Serum SPF20 dengan Niacinamide - Body Serum untuk Perlindungan UV, Kulit Cerah &amp; Lembap 100mL</h3>
-        <div class="shop">🏪 Unilever Beauty Shop</div>
-        <div class="pc-bottom">
-          <strong>22,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8KpPhdrUzp" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="focallure 2-in-1 on &amp; fix eyebrow pomade &amp; concealer 24h long-lasting waterproof smudge-proof makeup pinkpick official store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>FOCALLURE 2-in-1 On &amp; Fix Eyebrow Pomade &amp; Concealer 24H Long-lasting Waterproof Smudge-proof</h3>
-        <div class="shop">🏪 PinkPick Official Store</div>
-        <div class="pc-bottom">
-          <strong>39,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8AVzVKs8Ko" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="new formula ozzaskin anti dark spot sunscreen spf50+ pa++++ by oki setiana dewi 50gr halal bpom mengandung niacinamide, vit c &amp; hyaluronic acid melindungi dari sinar uva uvb, membantu menyamarkan flek hitam, mencerahkan, melembapkan &amp; menjaga skin barrier skincare ozzaskin official store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>New Formula Ozzaskin Anti Dark Spot Sunscreen SPF50+ PA++++ By Oki Setiana Dewi 50gr Halal BPOM Mengandung Niacinamide, Vit C &amp; Hyaluronic Acid Melindungi dari Sinar UVA UVB, Membantu Menyamarkan Flek Hitam, Mencerahkan, Melembapkan &amp; Menjaga Skin Barrier</h3>
-        <div class="shop">🏪 Ozzaskin Official Store</div>
-        <div class="pc-bottom">
-          <strong>198,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/80CZJ1slfn" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="ahmed al maghribi rose noir extrait de parfum 75 ml parfum ahmed al maghribi official store">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>AHMED AL MAGHRIBI Rose Noir Extrait De Parfum 75 ML</h3>
-        <div class="shop">🏪 Ahmed Al Maghribi Official Store</div>
-        <div class="pc-bottom">
-          <strong>600,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9AOWhAoKJ2" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="[400ml] white inc alpha glow white body lotion whitening &amp; moisturizing | body cream body lotion menghidrasi kulit body care white inc official shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>[400ml] WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
-        <div class="shop">🏪 White Inc Official Shop</div>
-        <div class="pc-bottom">
-          <strong>49,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/9056Uroxe1" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="omg oh my glam matte kis lip cream 3.5 gr | omg lip kiss lip cream omg matte last lip cream makeup realmen">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>OMG OH MY GLAM Matte Kis Lip Cream 3.5 gr | OMG Lip Kiss Lip Cream omg Matte Last Lip Cream</h3>
-        <div class="shop">🏪 REALMEN</div>
-        <div class="pc-bottom">
-          <strong>17,7RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8plgIYpaz0" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="vaseline repairing petroleum jelly original 100% pure 50ml body care unilever beauty shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
-        <div class="shop">🏪 Unilever Beauty Shop</div>
-        <div class="pc-bottom">
-          <strong>40,3RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/8fSG6FqEJz" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="bulu mata extension 10 baris bulu mata palsu eyelash extension riasan mata trilogy makeup chernailart">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Bulu Mata Extension 10 Baris Bulu Mata Palsu Eyelash Extension Riasan Mata Trilogy</h3>
-        <div class="shop">🏪 Chernailart</div>
-        <div class="pc-bottom">
-          <strong>10,5RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1qbvxhGFBg" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="rexa natural deodorant rexa tawas cair 100ml menghilangkan bau badan / ketiak body care kamaskoat">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>REXA Natural Deodorant REXA Tawas Cair 100ml menghilangkan bau badan / ketiak</h3>
-        <div class="shop">🏪 Kamaskoat</div>
-        <div class="pc-bottom">
-          <strong>4,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1gIVlOGsWf" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="maskara lijieyou viral maskara 2 warna tahan air dan kering long lasting curling mascara waterproof anti air dan smudge eye makeup makeup rumi.rumi00">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>MASKARA LIJIEYOU VIRAL Maskara 2 warna tahan air dan kering long lasting curling mascara waterproof anti air dan smudge eye makeup</h3>
-        <div class="shop">🏪 Rumi.rumi00</div>
-        <div class="pc-bottom">
-          <strong>25,0RB</strong>
-          <span>🔥 5RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1Vz5Z5HVre" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="acnaway mugwort gel facial wash 100ml- acne friendly gentle cleanser sabun cuci muka untuk kulit berjerawat sensitif wajah bersih tidak kering face wash sabun muka oil control fungal acne safe skincare daily cleanser all skin type facewash skincare acnaway official shop">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>ACNAWAY Mugwort Gel Facial Wash 100ml- Acne Friendly Gentle Cleanser Sabun Cuci Muka Untuk Kulit Berjerawat Sensitif Wajah Bersih Tidak Kering Face Wash Sabun Muka Oil Control Fungal Acne Safe Skincare Daily Cleanser All Skin Type Facewash</h3>
-        <div class="shop">🏪 Acnaway Official Shop</div>
-        <div class="pc-bottom">
-          <strong>35,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1LffMmI9Cd" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="cod bpom kudan kutek halal peel off  muslimah untuk sholat cat kuku 10ml (mz02) personal care store_kudan">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>COD BPOM Kudan Kutek Halal Peel Off  Muslimah Untuk Sholat Cat kuku 10ml (MZ02)</h3>
-        <div class="shop">🏪 Store_Kudan</div>
-        <div class="pc-bottom">
-          <strong>11,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2VrckvDhps" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="deodorant original spray tawas 60ml body care deo_skin">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>DEODORANT ORIGINAL SPRAY TAWAS 60ML</h3>
-        <div class="shop">🏪 Deo_Skin</div>
-        <div class="pc-bottom">
-          <strong>4,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2LYCYcELAr" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="hanasui mattedorable lip cream | boba edition | merah jingga official makeup merah jingga official store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Hanasui Mattedorable Lip Cream | BOBA EDITION | Merah Jingga Official</h3>
-        <div class="shop">🏪 Merah Jingga Official Store</div>
-        <div class="pc-bottom">
-          <strong>17,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2BEmMJEyVq" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="[raisa marie &amp; harry vaughan&#x27;s pick] npure sunscreen sport spf 50+ pa++++ sunscreen uva/uvb protection / water resistant / sunscreen olahraga ringan / sweat resistant/ aman bumil busui skincare npure official shop">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>[Raisa Marie &amp; Harry Vaughan&#x27;s Pick] NPURE Sunscreen Sport SPF 50+ PA++++ Sunscreen UVA/UVB Protection / Water Resistant / Sunscreen Olahraga Ringan / Sweat Resistant/ Aman Bumil Busui</h3>
-        <div class="shop">🏪 Npure Official Shop</div>
-        <div class="pc-bottom">
-          <strong>69,0RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/20vMA0Fbqp" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="garnier color natural express cream long lasting / ultra color sachet personal care thebeautyhouse">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>GARNIER Color Natural Express Cream Long Lasting / Ultra Color Sachet</h3>
-        <div class="shop">🏪 TheBeautyHouse</div>
-        <div class="pc-bottom">
-          <strong>19,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/W6YNFLJtY" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="[lebih murah] purbasari lulur pengantin 500g / lulur pemutih whitening pencerah / lulur pelembab kulit / lulur badan perontok daki / kemasan hemat ekonomis body care purbasari official store">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>[Lebih Murah] Purbasari Lulur Pengantin 500G / Lulur Pemutih Whitening Pencerah / Lulur pelembab kulit / Lulur Badan perontok daki / Kemasan Hemat ekonomis</h3>
-        <div class="shop">🏪 Purbasari Official Store</div>
-        <div class="pc-bottom">
-          <strong>29,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/Ln8AwLxEX" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="[ belia ] dazzle me get a grip! makeup setting spray 30ml | 60ml | matte fix dewy fix | tahan 24 jam makeup belia cosmetic">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>[ BELIA ] DAZZLE ME Get a Grip! Makeup Setting Spray 30ml | 60ml | Matte Fix Dewy Fix | Tahan 24 jam</h3>
-        <div class="shop">🏪 Belia Cosmetic</div>
-        <div class="pc-bottom">
-          <strong>30,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/BThydMaZW" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="perface bpom&amp;halal lazy cream tone up cream brightening &amp; whitening moisturizing radiance &amp; care for skin] skincare perface.indonesia">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>PERFACE BPOM&amp;HALAL LAZY CREAM TONE UP CREAM BRIGHTENING &amp; WHITENING MOISTURIZING Radiance &amp; Care For Skin]</h3>
-        <div class="shop">🏪 Perface.Indonesia</div>
-        <div class="pc-bottom">
-          <strong>38,8RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1AHmKNDuV" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="bulumata ne110 natural bagus dipakai buat sehari - hari personal care putrieyelashes">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>Bulumata NE110 Natural Bagus Dipakai Buat Sehari - Hari</h3>
-        <div class="shop">🏪 Putrieyelashes</div>
-        <div class="pc-bottom">
-          <strong>3,4RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/1BMFATImXk" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="nivea body serum extra bright day &amp; night (care &amp; protect + night nourish) 180ml x2 - merawat &amp; mencerahkan kulit di pagi &amp; malam body care nivea official store">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>NIVEA Body Serum Extra Bright Day &amp; Night (Care &amp; Protect + Night Nourish) 180ml x2 - Merawat &amp; mencerahkan kulit di pagi &amp; malam</h3>
-        <div class="shop">🏪 NIVEA Official Store</div>
-        <div class="pc-bottom">
-          <strong>54,4RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/112oyAJPsj" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="maange kepala ganda eyebrow pencil 3d tahan air sculpting long-lasting highly pigment pensil alis mg-e04 makeup maange official store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>MAANGE Kepala Ganda Eyebrow Pencil 3D Tahan Air Sculpting Long-lasting Highly Pigment Pensil Alis MG-E04</h3>
-        <div class="shop">🏪 MAANGE Official Store</div>
-        <div class="pc-bottom">
-          <strong>27,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/qjOlrK3Di" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Personal Care" data-search="somethinc ceraplump tinted lip balm spf25 pa++++ - warna untuk melembabkan &amp; memperkuat lip barrier | glowy finish, untuk bibir terlihat lebih sehat &amp; plumpy personal care somethinc official shop">
-      <div class="product-visual personal-care">
-        <div class="visual-emoji">🧼</div>
-        <span>Personal Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Personal Care</div>
-        <h3>SOMETHINC Ceraplump Tinted Lip Balm SPF25 PA++++ - Warna Untuk Melembabkan &amp; Memperkuat Lip Barrier | Glowy Finish, Untuk Bibir Terlihat Lebih Sehat &amp; Plumpy</h3>
-        <div class="shop">🏪 SOMETHINC Official Shop</div>
-        <div class="pc-bottom">
-          <strong>47,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/gPyZYKgYh" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="miniso body mist 150ml fragrance spray tahan lama natural series eau de body spray parfum parfum vanilla perfum spray pengharum badan unisex  hair mist parfum rambut parfum miniso indonesia">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut</h3>
-        <div class="shop">🏪 MINISO INDONESIA</div>
-        <div class="pc-bottom">
-          <strong>23,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4Vch8b65mS" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="kime luminizing jeju brightening soap – sabun pencerah badan wajah sabun pemutih glowing badan muka skincare kime skincare official store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>KIME LUMINIZING JEJU BRIGHTENING SOAP – Sabun Pencerah Badan Wajah Sabun Pemutih Glowing Badan Muka</h3>
-        <div class="shop">🏪 Kime Skincare Official Store</div>
-        <div class="pc-bottom">
-          <strong>26,3RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4LJGwI6j7R" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="igoodco (ig3110/ig3110s) pearlescent matte easy tinting eyeshadow book makeup igoodco">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>IGOODCO (IG3110/IG3110S) Pearlescent Matte Easy Tinting Eyeshadow Book</h3>
-        <div class="shop">🏪 IGOODCO</div>
-        <div class="pc-bottom">
-          <strong>150,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4Azqjz7MSQ" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="glad2glow brightening lip serum 7g | lip serum 3in1 | melembapkan, mencerahkan &amp; memberi warna natural | vitamin c &amp; e skincare august store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Glad2Glow Brightening Lip Serum 7g | Lip Serum 3in1 | Melembapkan, Mencerahkan &amp; Memberi Warna Natural | Vitamin C &amp; E</h3>
-        <div class="shop">🏪 August Store</div>
-        <div class="pc-bottom">
-          <strong>295,1RB</strong>
-          <span>🔥 299 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/40gQXg7znP" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="suntikan parfum 1ml untuk decant pemindah parfum dari botol asli - suntik syringe perfume pump dispenser parfum pao2store">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>Suntikan Parfum 1ml untuk Decant Pemindah Parfum dari Botol Asli - Suntik Syringe Perfume Pump Dispenser</h3>
-        <div class="shop">🏪 pao2store</div>
-        <div class="pc-bottom">
-          <strong>2,5RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/5AsNvp3YQe" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="[ belia ] nivea deodorant roll on | 25 | 50 | men | women | whitening pearl beauty silk touch hijab body care belia cosmetic">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>[ BELIA ] NIVEA Deodorant Roll On | 25 | 50 | Men | Women | Whitening Pearl Beauty Silk Touch Hijab</h3>
-        <div class="shop">🏪 Belia Cosmetic</div>
-        <div class="pc-bottom">
-          <strong>12,1RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/50YxjW4Bld" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="unimese muge leen 9 warna eyeshadow waterproof tahan air perona mata palet untuk harian makeup unimese">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Unimese Muge Leen 9 Warna Eyeshadow Waterproof Tahan Air Perona Mata Palet Untuk Harian</h3>
-        <div class="shop">🏪 UNIMESE</div>
-        <div class="pc-bottom">
-          <strong>21,0RB</strong>
-          <span>🔥 5RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4qFXXD4p6c" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="papaya all skin facial wash pemutih penghilang flek hitam pembersih wajah pemutih wajah jerawat tungau pembersih dan komedo mencerahkan warna skincare suger beautier">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Papaya All Skin facial wash Pemutih Penghilang Flek Hitam Pembersih Wajah Pemutih Wajah Jerawat Tungau Pembersih Dan Komedo Mencerahkan warna</h3>
-        <div class="shop">🏪 Suger Beautier</div>
-        <div class="pc-bottom">
-          <strong>17,7RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/4fw7Ku5SRb" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Hair Care" data-search="miranda hair colour 30gr | cat rambut miranda | tnt beauty shop hair care tnt beauty shop">
-      <div class="product-visual hair-care">
-        <div class="visual-emoji">💇</div>
-        <span>Hair Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Hair Care</div>
-        <h3>Miranda Hair Colour 30gr | Cat Rambut Miranda | TnT Beauty Shop</h3>
-        <div class="shop">🏪 TnT Beauty Shop</div>
-        <div class="pc-bottom">
-          <strong>12,6RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3B7JY9BAUK" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="marina healthy booster brightening serum series 185ml skincare mulia stationery">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Marina Healthy Booster Brightening Serum Series 185ml</h3>
-        <div class="shop">🏪 Mulia Stationery</div>
-        <div class="pc-bottom">
-          <strong>11,5RB</strong>
-          <span>🔥 33 terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/30ntLqBnpJ" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="bedak basah  perfect powder cream 10ml ( 1pcs ) - daviena skincare makeup daviena skincare official store">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>BEDAK BASAH  Perfect Powder Cream 10ml ( 1PCS ) - DAVIENA SKINCARE</h3>
-        <div class="shop">🏪 DAVIENA SKINCARE Official Store</div>
-        <div class="pc-bottom">
-          <strong>54,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2qUT9XCRAI" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="[best seller sunscreen] hanasui collagen water sunscreen spf 50 pa+++ - mencerahkan melembapkan no whitecast ringan cepat meresap collagen niacinamide wajah glowing tabir surya skincare bpom sunblock anti uva uvb protection kulit berminyak skincare hanasui official shop">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>[BEST SELLER SUNSCREEN] HANASUI Collagen Water Sunscreen SPF 50 PA+++ - Mencerahkan Melembapkan No Whitecast Ringan Cepat Meresap Collagen Niacinamide Wajah Glowing Tabir Surya Skincare BPOM Sunblock Anti UVA UVB Protection Kulit Berminyak</h3>
-        <div class="shop">🏪 Hanasui Official Shop</div>
-        <div class="pc-bottom">
-          <strong>50,4RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/2gB2xED4VH" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Skincare" data-search="makarizo barber daily bright radiance face wash 100ml | merah jingga official skincare merah jingga official store">
-      <div class="product-visual skincare">
-        <div class="visual-emoji">🧴</div>
-        <span>Skincare</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Skincare</div>
-        <h3>Makarizo Barber Daily Bright Radiance Face Wash 100ml | Merah Jingga Official</h3>
-        <div class="shop">🏪 Merah Jingga Official Store</div>
-        <div class="pc-bottom">
-          <strong>30,0RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3qN0LN8d8W" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Parfum" data-search="heura scandal - extrait de parfum - aroma sweet fruity parfum perfume minyak wangi wanita tahan lama parfum heura official store">
-      <div class="product-visual parfum">
-        <div class="visual-emoji">🌸</div>
-        <span>Parfum</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Parfum</div>
-        <h3>HEURA Scandal - Extrait de Parfum - Aroma Sweet Fruity Parfum Perfume Minyak Wangi Wanita Tahan Lama</h3>
-        <div class="shop">🏪 HEURA Official Store</div>
-        <div class="pc-bottom">
-          <strong>89,9RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3g3a949GTV" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Makeup" data-search="liquid blush watercolor  perona pipi blush on cair  liquid matte tahan lama dan anti air blusher  high pigmented  pemerah pipi   perona natural moisturizing multi guna tahan lama eyeshadow makeup rosetims">
-      <div class="product-visual makeup">
-        <div class="visual-emoji">💄</div>
-        <span>Makeup</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Makeup</div>
-        <h3>Liquid Blush watercolor  Perona Pipi Blush On Cair  liquid matte tahan lama dan anti air blusher  high pigmented  pemerah pipi   Perona natural moisturizing Multi Guna Tahan Lama Eyeshadow</h3>
-        <div class="shop">🏪 ROSETIMS</div>
-        <div class="pc-bottom">
-          <strong>38,0RB</strong>
-          <span>🔥 2RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3Vk9wl9toU" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article>
-    <article class="product-card" data-cat="Body Care" data-search="vaseline repairing petroleum jelly original 100% pure 50ml body care unilever indonesia official shop">
-      <div class="product-visual body-care">
-        <div class="visual-emoji">🫧</div>
-        <span>Body Care</span>
-      </div>
-      <div class="pc-body">
-        <div class="cat-label">Body Care</div>
-        <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
-        <div class="shop">🏪 Unilever Indonesia Official Shop</div>
-        <div class="pc-bottom">
-          <strong>35,5RB</strong>
-          <span>🔥 10RB+ terjual</span>
-        </div>
-        <a class="buy" href="https://s.shopee.co.id/3LQjkSAX9T" target="_blank" rel="sponsored noopener">CEK DI SHOPEE ↗</a>
-      </div>
-    </article></div><div class="empty" id="empty">😅 Produk tidak ditemukan. Coba kata kunci lain.</div>
-</div></section>
-
-<section class="section" id="tentang"><div class="wrap"><div class="notice"><strong>Catatan:</strong> visual produk di kartu adalah ilustrasi kategori, bukan foto produk asli. Saat Open API Shopee Affiliate sudah aktif, bagian ini bisa diganti otomatis menggunakan <code>imageUrl</code> dari API tanpa perlu menyimpan foto di GitHub.</div></div></section>
+<main>
+  <section class="hero">
+    <div>
+      <div class="kicker">✨ Temuan yang worth it</div>
+      <h1>Barang bagus yang bikin susah bilang “nggak”.</h1>
+      <p>RACUNIN menyusun produk dari katalog affiliate kamu supaya lebih enak dilihat dan gampang dipilih. Klik produk untuk langsung menuju link affiliate.</p>
+    </div>
+    <div class="hero-note">
+      <div class="emoji">🛒✨</div>
+      <h2>Checkout dengan otak.</h2>
+      <p>Semua tombol produk langsung mengarah ke link affiliate. Gambar kategori hanya pemanis layout.</p>
+    </div>
+  </section>
+  <nav class="nav" aria-label="Kategori"><a href="#skincare">🧴 Skincare</a><a href="#makeup">💄 Makeup</a><a href="#parfum">🌸 Parfum</a><a href="#hair-care">💇 Hair Care</a><a href="#personal-care">🧴 Personal Care</a><a href="#body-care">🧼 Body Care</a></nav>
+  
+        <section id="skincare" class="category">
+          <div class="category-visual">
+            <img src="https://e-fillers.com/storage/uploads/blogs/5-signs-its-time-for-a-skincare-update-when-to-consider-aesthetic-treatments/1725549249841_rendered-photo-beautiful-model-applying-skin-care-products-flat-illustration.webp" alt="Ilustrasi Skincare — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">🧴 KATEGORI</div>
+              <h2>Skincare</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/9AOWhAoKI3" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[3PCS] KAHF Face Wash Skin Energizing &amp; Brightening 100mL (Triple Pack)</h3>
+          <div class="meta">
+            <strong>Rp 123,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">COZME Official ✅</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/20vMA0Fbpk" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MS GLOW - FACIAL WASH SUPER CLEAN - 100 ML</h3>
+          <div class="meta">
+            <strong>Rp 59,5RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">MS Glow Beauty Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1BMFATImWl" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[ORI BPOM] KAHF Face Wash 100ml | Sabun Pembersih Wajah Pria | Gentle Exfoliating | Face Scrub</h3>
+          <div class="meta">
+            <strong>Rp 38,0RB</strong>
+            <span>🔥 1RB+ terjual</span>
+          </div>
+          <div class="shop">CELESTE.STORE</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4fw7Ku5SQW" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Lovely Naturals Body Serum Original Jumbo Besar 400ml</h3>
+          <div class="meta">
+            <strong>Rp 10,8RB</strong>
+            <span>🔥 146 terjual</span>
+          </div>
+          <div class="shop">Faiz Cosmetik &amp; Accesoris</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/50YxjW4Bkc" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Glad2Glow Facial Cleanser Blueberry Ceramide Low pH Face Gel Cleanser 70ml Pembersih Wajah Pembersih Muka | Deep Pore Cleanser Volcanic Ash | Yuzu Vitamin C | Acne gel cleanser</h3>
+          <div class="meta">
+            <strong>Rp 24,5RB</strong>
+            <span>🔥 457 terjual</span>
+          </div>
+          <div class="shop">DewSkinStudio.id</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3qN0LN8d7X" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Collagen Foot Cream 60g Krim Kaki Pecah Dan Kering Dan Kasar Ampuh foot cream 100% Original Perbaikan Anti Kering Retak Perawatan Kulit - Mencegah Kekeringan Mencegah Kaki Retak Krim Pelembab Dalam Krim Perawatan Kaki Krim Tumit Kaki Kapalan Pecah Kasar</h3>
+          <div class="meta">
+            <strong>Rp 17,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">healthcare doctor</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/7AdSJUvwMC" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
+          <div class="meta">
+            <strong>Rp 5,0RB</strong>
+            <span>🔥 1RB+ terjual</span>
+          </div>
+          <div class="shop">pemula.id</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9peDUOlmwy" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Pigeon Teens Paket Lengkap Skincare Kulit Glowing Kulit Kusam Kulit Mencerahkan Kulit Berjerawat</h3>
+          <div class="meta">
+            <strong>Rp 71,9RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">NewTokoToko</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/AKaU5Jjsw9" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>BRUSH CLEANSER SPRAY OMG.ITSFRESH TERMURAH</h3>
+          <div class="meta">
+            <strong>Rp 34,0RB</strong>
+            <span>🔥 24 terjual</span>
+          </div>
+          <div class="shop">D&amp;GBeautyshop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/8KpPhdrUzp" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Vaseline Soft Glow Gluta Vitamin Body Serum SPF20 dengan Niacinamide - Body Serum untuk Perlindungan UV, Kulit Cerah &amp; Lembap 100mL</h3>
+          <div class="meta">
+            <strong>Rp 22,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Unilever Beauty Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/80CZJ1slfn" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>New Formula Ozzaskin Anti Dark Spot Sunscreen SPF50+ PA++++ By Oki Setiana Dewi 50gr Halal BPOM Mengandung Niacinamide, Vit C &amp; Hyaluronic Acid Melindungi dari Sinar UVA UVB, Membantu Menyamarkan Flek Hitam, Mencerahkan, Melembapkan &amp; Menjaga Skin Barrier</h3>
+          <div class="meta">
+            <strong>Rp 198,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Ozzaskin Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9056Uroxe1" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[400ml] WHITE INC Alpha Glow White Body Lotion Whitening &amp; Moisturizing | Body Cream Body Lotion Menghidrasi Kulit</h3>
+          <div class="meta">
+            <strong>Rp 49,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">White Inc Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1LffMmI9Cd" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>ACNAWAY Mugwort Gel Facial Wash 100ml- Acne Friendly Gentle Cleanser Sabun Cuci Muka Untuk Kulit Berjerawat Sensitif Wajah Bersih Tidak Kering Face Wash Sabun Muka Oil Control Fungal Acne Safe Skincare Daily Cleanser All Skin Type Facewash</h3>
+          <div class="meta">
+            <strong>Rp 35,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Acnaway Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/20vMA0Fbqp" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[Raisa Marie &amp; Harry Vaughan&#x27;s Pick] NPURE Sunscreen Sport SPF 50+ PA++++ Sunscreen UVA/UVB Protection / Water Resistant / Sunscreen Olahraga Ringan / Sweat Resistant/ Aman Bumil Busui</h3>
+          <div class="meta">
+            <strong>Rp 69,0RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">Npure Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/W6YNFLJtY" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>GARNIER Color Natural Express Cream Long Lasting / Ultra Color Sachet</h3>
+          <div class="meta">
+            <strong>Rp 19,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">TheBeautyHouse</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/112oyAJPsj" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>NIVEA Body Serum Extra Bright Day &amp; Night (Care &amp; Protect + Night Nourish) 180ml x2 - Merawat &amp; mencerahkan kulit di pagi &amp; malam</h3>
+          <div class="meta">
+            <strong>Rp 54,4RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">NIVEA Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4fw7Ku5SRb" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Papaya All Skin facial wash Pemutih Penghilang Flek Hitam Pembersih Wajah Pemutih Wajah Jerawat Tungau Pembersih Dan Komedo Mencerahkan warna</h3>
+          <div class="meta">
+            <strong>Rp 17,7RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Suger Beautier</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/30ntLqBnpJ" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Marina Healthy Booster Brightening Serum Series 185ml</h3>
+          <div class="meta">
+            <strong>Rp 11,5RB</strong>
+            <span>🔥 33 terjual</span>
+          </div>
+          <div class="shop">Mulia Stationery</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2gB2xED4VH" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[BEST SELLER SUNSCREEN] HANASUI Collagen Water Sunscreen SPF 50 PA+++ - Mencerahkan Melembapkan No Whitecast Ringan Cepat Meresap Collagen Niacinamide Wajah Glowing Tabir Surya Skincare BPOM Sunblock Anti UVA UVB Protection Kulit Berminyak</h3>
+          <div class="meta">
+            <strong>Rp 50,4RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Hanasui Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3qN0LN8d8W" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Skincare</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Makarizo Barber Daily Bright Radiance Face Wash 100ml | Merah Jingga Official</h3>
+          <div class="meta">
+            <strong>Rp 30,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Merah Jingga Official Store</div>
+        </a></div>
+        </section>
+        <section id="makeup" class="category">
+          <div class="category-visual">
+            <img src="https://weddingmarket.com/storage/images/artikelidea/01795c429b72738bad6fdf0da0624afeb609b7a8.webp" alt="Ilustrasi Makeup — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">💄 KATEGORI</div>
+              <h2>Makeup</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/9056Uroxd0" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>G2G Lip Serum GLAD2GLOW BRIGHTENING LIP SERUM Mencerahkan Bibir with Vitamin E</h3>
+          <div class="meta">
+            <strong>Rp 22,5RB</strong>
+            <span>🔥 149 terjual</span>
+          </div>
+          <div class="shop">saysalamshop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1qbvxhGFAh" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Cermin Rias Makeup Lucu Gaya Kartun Standing Mirror Minimalis Dekorasi Kaca Meja Aesthetic</h3>
+          <div class="meta">
+            <strong>Rp 27,9RB</strong>
+            <span>🔥 1RB+ terjual</span>
+          </div>
+          <div class="shop">Oura Accessories</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2LYCYcEL9q" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>G2G Lip serum - Glad2Glow Lip Brightening Serum 7g - Mencerahkan, Melembapkan, dan Beri Warna dengan Tekstur Ringan</h3>
+          <div class="meta">
+            <strong>Rp 23,5RB</strong>
+            <span>🔥 63 terjual</span>
+          </div>
+          <div class="shop">saysalamshop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2VrckvDhot" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[KOOKO] 13pcs Soft Kuas Makeup Set Kosmetic Brushes Powder Eye Shadow Blusher Kuas With Pouch - 7001</h3>
+          <div class="meta">
+            <strong>Rp 15,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Kooko</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/Ln8AwLxDW" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Implora Day To Day Two Way Cake | Bedak Ringan &amp; Samarkan Pori</h3>
+          <div class="meta">
+            <strong>Rp 23,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Implora Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/W6YNFLJsZ" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Eyeshadow Stick 3 Warna Gradasi Multifungsi Shimmer Waterproof Long Lasting Tahan Lama Tahan Air Makeup</h3>
+          <div class="meta">
+            <strong>Rp 34,9RB</strong>
+            <span>🔥 9RB+ terjual</span>
+          </div>
+          <div class="shop">Meet Beauty</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4LJGwI6j6Q" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>BPOM Gloow&amp;be Glass Skin Sunscreen Glowing Hybrid Tone Up No Effort SPF 40 PA+++ 50ml - Narcisse</h3>
+          <div class="meta">
+            <strong>Rp 39,9RB</strong>
+            <span>🔥 3RB+ terjual</span>
+          </div>
+          <div class="shop">Narcisse</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4Vch8b65lT" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>lipcream OMG matte kiss clearence sale</h3>
+          <div class="meta">
+            <strong>Rp 11,9RB</strong>
+            <span>🔥 4RB+ terjual</span>
+          </div>
+          <div class="shop">caca solo</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5AsNvp3YPf" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Cermin Bunga Standing Mirror Makeup Rotating Cermin Aesthetic | Stand Mirorr Flower Kaca Meja Rias Serbaguna</h3>
+          <div class="meta">
+            <strong>Rp 8,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Supplier Termurah Official</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3B7JY9BATL" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Eyeshadow Stick 3 Warna Gradasi Shimmer Pigmented Waterproof Tahan Lama Mudah Dibaurkan Sekali Oles Untuk Pemula</h3>
+          <div class="meta">
+            <strong>Rp 35,3RB</strong>
+            <span>🔥 597 terjual</span>
+          </div>
+          <div class="shop">SeeLight Beauty Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/6fhBiZxqN9" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>OMG OH MY GLAM MATTE Kiss Lip Cream OMBRE OH MY GLAM LIPSTIK</h3>
+          <div class="meta">
+            <strong>Rp 10,2RB</strong>
+            <span>🔥 956 terjual</span>
+          </div>
+          <div class="shop">Arfiz Olshop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/7fZiuPu2LN" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>GUMIHO | BULU MATA PALSU 10-12mm Length 10 BARIS Trilogy Bulu Mata Palus 3D Natural bulmat eyelash extension Perlu Lem Lentik Mlen (tidak termasuk lem)</h3>
+          <div class="meta">
+            <strong>Rp 16,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">HOLO Cos Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/7VGIi6ufgM" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>DAZZLE ME INK-GLOSS Lip Tint Lip Gloss Tahan Lama Glossy dan Plumpy Finish Waterproof Stained High Pigmented</h3>
+          <div class="meta">
+            <strong>Rp 21,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">twiebeauty</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5foeWk1eP3" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>JETZKY - Bulu Mata Palsu Eyelash Extension Natural Aksesoris Make Up Daily Riasan Mata Korean Beauty Premium</h3>
+          <div class="meta">
+            <strong>Rp 5,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">jetzky.store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5VVEKR2Hk2" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Lipstik Batang Sensational Colour Matte Tahan Lama</h3>
+          <div class="meta">
+            <strong>Rp 10,0RB</strong>
+            <span>🔥 5RB+ terjual</span>
+          </div>
+          <div class="shop">Toko_Cantik ku</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/6L4LJxz73F" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Lestari Butik - Puffy pouch polkadot kecil list navy - ribbon navy - cute pouch - makeup pouch -puffy pouch makeup polkadot ribbon navy</h3>
+          <div class="meta">
+            <strong>Rp 14,0RB</strong>
+            <span>🔥 124 terjual</span>
+          </div>
+          <div class="shop">butik lestari</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/6Akv7ezkOE" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Glad2Glow Perfect Cover Cushion Foundation Waterproof Make Up Setting Concealer BB Cream Tahan Lama Hingga 12 Jam Hasil Akhir</h3>
+          <div class="meta">
+            <strong>Rp 60,5RB</strong>
+            <span>🔥 3RB+ terjual</span>
+          </div>
+          <div class="shop">Kliki Beauty</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9V1N5mn3cw" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Azzura Liptint - Hydrating Color Stain Smooth Glossy Plumpy Longlasting</h3>
+          <div class="meta">
+            <strong>Rp 30,5RB</strong>
+            <span>🔥 4RB+ terjual</span>
+          </div>
+          <div class="shop">Wings Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/AAH3t0kWH8" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MAANGE Creamy Blush On Stick Multi-Use High Pigmented Long-lasting Light Nutrual Face Makeup MG-F03</h3>
+          <div class="meta">
+            <strong>Rp 41,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">MAANGE Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/8AVzVKs8Ko" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>FOCALLURE 2-in-1 On &amp; Fix Eyebrow Pomade &amp; Concealer 24H Long-lasting Waterproof Smudge-proof</h3>
+          <div class="meta">
+            <strong>Rp 39,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">PinkPick Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/8plgIYpaz0" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>OMG OH MY GLAM Matte Kis Lip Cream 3.5 gr | OMG Lip Kiss Lip Cream omg Matte Last Lip Cream</h3>
+          <div class="meta">
+            <strong>Rp 17,7RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">REALMEN</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1qbvxhGFBg" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Bulu Mata Extension 10 Baris Bulu Mata Palsu Eyelash Extension Riasan Mata Trilogy</h3>
+          <div class="meta">
+            <strong>Rp 10,5RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Chernailart</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1Vz5Z5HVre" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MASKARA LIJIEYOU VIRAL Maskara 2 warna tahan air dan kering long lasting curling mascara waterproof anti air dan smudge eye makeup</h3>
+          <div class="meta">
+            <strong>Rp 25,0RB</strong>
+            <span>🔥 5RB+ terjual</span>
+          </div>
+          <div class="shop">Rumi.rumi00</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2BEmMJEyVq" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Hanasui Mattedorable Lip Cream | BOBA EDITION | Merah Jingga Official</h3>
+          <div class="meta">
+            <strong>Rp 17,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Merah Jingga Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/BThydMaZW" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[ BELIA ] DAZZLE ME Get a Grip! Makeup Setting Spray 30ml | 60ml | Matte Fix Dewy Fix | Tahan 24 jam</h3>
+          <div class="meta">
+            <strong>Rp 30,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Belia Cosmetic</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1AHmKNDuV" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PERFACE BPOM&amp;HALAL LAZY CREAM TONE UP CREAM BRIGHTENING &amp; WHITENING MOISTURIZING Radiance &amp; Care For Skin]</h3>
+          <div class="meta">
+            <strong>Rp 38,8RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Perface.Indonesia</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/qjOlrK3Di" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MAANGE Kepala Ganda Eyebrow Pencil 3D Tahan Air Sculpting Long-lasting Highly Pigment Pensil Alis MG-E04</h3>
+          <div class="meta">
+            <strong>Rp 27,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">MAANGE Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/gPyZYKgYh" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>SOMETHINC Ceraplump Tinted Lip Balm SPF25 PA++++ - Warna Untuk Melembabkan &amp; Memperkuat Lip Barrier | Glowy Finish, Untuk Bibir Terlihat Lebih Sehat &amp; Plumpy</h3>
+          <div class="meta">
+            <strong>Rp 47,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">SOMETHINC Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4Azqjz7MSQ" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>IGOODCO (IG3110/IG3110S) Pearlescent Matte Easy Tinting Eyeshadow Book</h3>
+          <div class="meta">
+            <strong>Rp 150,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">IGOODCO</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/40gQXg7znP" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Glad2Glow Brightening Lip Serum 7g | Lip Serum 3in1 | Melembapkan, Mencerahkan &amp; Memberi Warna Natural | Vitamin C &amp; E</h3>
+          <div class="meta">
+            <strong>Rp 295,1RB</strong>
+            <span>🔥 299 terjual</span>
+          </div>
+          <div class="shop">August Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4qFXXD4p6c" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Unimese Muge Leen 9 Warna Eyeshadow Waterproof Tahan Air Perona Mata Palet Untuk Harian</h3>
+          <div class="meta">
+            <strong>Rp 21,0RB</strong>
+            <span>🔥 5RB+ terjual</span>
+          </div>
+          <div class="shop">UNIMESE</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2qUT9XCRAI" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>BEDAK BASAH Perfect Powder Cream 10ml ( 1PCS ) - DAVIENA SKINCARE</h3>
+          <div class="meta">
+            <strong>Rp 54,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">DAVIENA SKINCARE Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3Vk9wl9toU" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Makeup</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Liquid Blush watercolor Perona Pipi Blush On Cair liquid matte tahan lama dan anti air blusher high pigmented pemerah pipi Perona natural moisturizing Multi Guna Tahan Lama Eyeshadow</h3>
+          <div class="meta">
+            <strong>Rp 38,0RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">ROSETIMS</div>
+        </a></div>
+        </section>
+        <section id="parfum" class="category">
+          <div class="category-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdYtUkJCujuI7g66D6LgpefSqMhMV8RTiI2eUYmnWZg&amp;s=10" alt="Ilustrasi Parfum — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">🌸 KATEGORI</div>
+              <h2>Parfum</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/8plgIYpaxx" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>{TERLARIS NO 1} INSSPIRED OCTARINE PARFUME EDP PARFUMTAHANLAMA|PARFUMPRIA|PARFUMWANITA|PARFUMUNISEX|PARFUMTRAVELING DECANT</h3>
+          <div class="meta">
+            <strong>Rp 18,0RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">Autocarestore</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1Vz5Z5HVqb" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[BELI 2 GRATIS 1] Decant Mykonos Original 3ml 5ml 10ml | Parfum Original Pria Wanita | Free Tester | Parfum Unisex</h3>
+          <div class="meta">
+            <strong>Rp 17,3RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Aflah.scent</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2BEmMJEyUn" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>(Buy 1 Get 1) Scarlite Perfume Unisex 30ml</h3>
+          <div class="meta">
+            <strong>Rp 13,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Eterna.Id</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/qjOlrK3Cf" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PARFUM SCARLET EXTRAIT EAU DE PARFUM 30 ML | PARFUM Wangi Tahan Lama | Parfum Unisex</h3>
+          <div class="meta">
+            <strong>Rp 10,0RB</strong>
+            <span>🔥 1RB+ terjual</span>
+          </div>
+          <div class="shop">Nurr aroma</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4Azqjz7MRN" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[TERLARIS] SCARLETT Inspired EDP &amp; Extrait De Parfum 30ml Wangi Tahan Lama -</h3>
+          <div class="meta">
+            <strong>Rp 12,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Autocarestore</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4qFXXD4p5Z" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Parfum Mix D&#x27;nhill X Scandalush Beli 1 Dapat 3 Eau De Parfume Unisex Tahan Lama 12 Jam</h3>
+          <div class="meta">
+            <strong>Rp 12,0RB</strong>
+            <span>🔥 9RB+ terjual</span>
+          </div>
+          <div class="shop">Rumahparfume.id</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2qUT9XCR9F" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Pucelle Eau De Luxe Parfum 50ml Wanita Multitalenta</h3>
+          <div class="meta">
+            <strong>Rp 8,0RB</strong>
+            <span>🔥 334 terjual</span>
+          </div>
+          <div class="shop">HarumeAroma</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3Vk9wl9tnR" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Parfum Scarlett Eau De Parfum 30ml - Aroma Mewah, Desain Portabel, Pilihan Varian</h3>
+          <div class="meta">
+            <strong>Rp 8,8RB</strong>
+            <span>🔥 3RB+ terjual</span>
+          </div>
+          <div class="shop">ScentedBlish_</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/70K27BwZhB" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Scarlett Eau De Perfume &amp; Extrait De Perfume 30ml - All Variant</h3>
+          <div class="meta">
+            <strong>Rp 9,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">finishshop.co</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5q84j31144" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PAKET HEMAT 3 PARFUM PREMIUM 100ML</h3>
+          <div class="meta">
+            <strong>Rp 14,7RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Perfume Indo Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/6VNlWGyTiG" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[MIX 3 PARFUM - BEBAS PILIH VARIAN] SCARLETT Eau De Parfum &amp; Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah</h3>
+          <div class="meta">
+            <strong>Rp 64,5RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Scarlett Whitening Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9fKnI5mQHx" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>BIRTH OF VENUS Parfum Cowok Premium Extrait De Parfum 100ML TAHAN LAMA</h3>
+          <div class="meta">
+            <strong>Rp 175,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">ROYALE SANCTIORS</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9zxdghl9c7" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PROMO DAPAT 3 PARFUM BOX PREMIUM SPARKLING SERIES SCENTPRO PARFUM PEMIKAT PARFUM PRIA WANITA</h3>
+          <div class="meta">
+            <strong>Rp 44,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Semarmesem19</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/8V8ptwqreq" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PARFUM DUNHIL BLUE || PARFUM PRIA FRESH TAHAN LAMA || PARFUM PRIA || PARFUM COWOK TAHAN LAMA 30ML</h3>
+          <div class="meta">
+            <strong>Rp 19,2RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Youme.scent</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9AOWhAoKJ2" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>AHMED AL MAGHRIBI Rose Noir Extrait De Parfum 75 ML</h3>
+          <div class="meta">
+            <strong>Rp 600,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Ahmed Al Maghribi Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4Vch8b65mS" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex Hair Mist Parfum Rambut</h3>
+          <div class="meta">
+            <strong>Rp 23,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">MINISO INDONESIA</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5AsNvp3YQe" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Suntikan Parfum 1ml untuk Decant Pemindah Parfum dari Botol Asli - Suntik Syringe Perfume Pump Dispenser</h3>
+          <div class="meta">
+            <strong>Rp 2,5RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">pao2store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3g3a949GTV" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Parfum</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>HEURA Scandal - Extrait de Parfum - Aroma Sweet Fruity Parfum Perfume Minyak Wangi Wanita Tahan Lama</h3>
+          <div class="meta">
+            <strong>Rp 89,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">HEURA Official Store</div>
+        </a></div>
+        </section>
+        <section id="hair-care" class="category">
+          <div class="category-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtvoNH5esjE63sXEoSRDNqHXaaBLOpKxxl7vBYkWHeg&amp;s=10" alt="Ilustrasi Hair Care — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">💇 KATEGORI</div>
+              <h2>Hair Care</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/6q0busxD2A" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Hair Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>shampo sachet zinc kemasan renceng isi 24 pcs murah</h3>
+          <div class="meta">
+            <strong>Rp 5,8RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">toko@himmah</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/AUtuHcjFbA" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Hair Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[ BPOM &amp; HALAL ] Shampo Kemiri Penumbuh Rambut Cepat Anti Ketombe Penghilang Uban dan Rontok - 500ml TERLARIS &amp; VIRAL</h3>
+          <div class="meta">
+            <strong>Rp 38,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">AnythingShop.id</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3B7JY9BAUK" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Hair Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Miranda Hair Colour 30gr | Cat Rambut Miranda | TnT Beauty Shop</h3>
+          <div class="meta">
+            <strong>Rp 12,6RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">TnT Beauty Shop</div>
+        </a></div>
+        </section>
+        <section id="personal-care" class="category">
+          <div class="category-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnZ9hJH57pYZMbKipNQ_YAXnJ4pbMqgm_FG1aoqgyw&amp;s=10" alt="Ilustrasi Personal Care — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">🧴 KATEGORI</div>
+              <h2>Personal Care</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/1gIVlOGsVe" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>( HARGA GROSIR ) FRESS BATANG sabun wangi batang Fress macaron, cotton, green Mirage Fress sabun Harga Batangan</h3>
+          <div class="meta">
+            <strong>Rp 2,2RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">Lapak_Tokokku</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/BThydMaYT" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>MYKONOS ALL VARIAN DECANT | 3ml 5ml 10ml ORIGINAL SHARE IN JAR</h3>
+          <div class="meta">
+            <strong>Rp 22,9RB</strong>
+            <span>🔥 6RB+ terjual</span>
+          </div>
+          <div class="shop">Decant by society</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/gPyZYKgXc" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Inai Kuku For muslimah kutek kuku Halal Sah Untuk Sholat Tahan Lama</h3>
+          <div class="meta">
+            <strong>Rp 7,3RB</strong>
+            <span>🔥 5RB+ terjual</span>
+          </div>
+          <div class="shop">CACASHOP85</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/112oyAJPri" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Sabun GIV Batang 72gr ( Cek Variasi )</h3>
+          <div class="meta">
+            <strong>Rp 14,3RB</strong>
+            <span>🔥 2RB+ terjual</span>
+          </div>
+          <div class="shop">FAIKSHOPJEMBER</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2gB2xED4UC" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>12Pcs Sabun GIV Batang 72gr PROMO Murah Random</h3>
+          <div class="meta">
+            <strong>Rp 14,0RB</strong>
+            <span>🔥 984 terjual</span>
+          </div>
+          <div class="shop">DiffaniBeautyStore</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/30ntLqBnoI" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>INAIKUKU MUSLIMAH BY LUBABA HENNA HALAL BPOM</h3>
+          <div class="meta">
+            <strong>Rp 8,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Zaaraaa23</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3g3a949GSU" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Drve paket bundling 6in1 mengandung NiacinamideAnti Aging Brightening Membantu mengurangi tanda-tanda penuaan dini dan membantu menjaga kelembapan kulit sepanjang hari Acne Treatment Glowing Set</h3>
+          <div class="meta">
+            <strong>Rp 153,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Drve Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/7pt96itP0O" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>PAKET HEMAT 2 PCS PEPSODENT STRONG + 3 PCS SABUN DETTOL</h3>
+          <div class="meta">
+            <strong>Rp 25,6RB</strong>
+            <span>🔥 3RB+ terjual</span>
+          </div>
+          <div class="shop">ZZ Perfume</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/7KwsVnvJ1L" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[BPOM] LUBABA HENNA\ INAI KUKU HALAL SAH SOLAT/WARNA TAHAN LAMA DAN PEKAT</h3>
+          <div class="meta">
+            <strong>Rp 8,0RB</strong>
+            <span>🔥 6RB+ terjual</span>
+          </div>
+          <div class="shop">ER.mart</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2VrckvDhps" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>COD BPOM Kudan Kutek Halal Peel Off Muslimah Untuk Sholat Cat kuku 10ml (MZ02)</h3>
+          <div class="meta">
+            <strong>Rp 11,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Store_Kudan</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1BMFATImXk" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Bulumata NE110 Natural Bagus Dipakai Buat Sehari - Hari</h3>
+          <div class="meta">
+            <strong>Rp 3,4RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Putrieyelashes</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/4LJGwI6j7R" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Personal Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>KIME LUMINIZING JEJU BRIGHTENING SOAP – Sabun Pencerah Badan Wajah Sabun Pemutih Glowing Badan Muka</h3>
+          <div class="meta">
+            <strong>Rp 26,3RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Kime Skincare Official Store</div>
+        </a></div>
+        </section>
+        <section id="body-care" class="category">
+          <div class="category-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwigobMAUTeVt5g4Q3XsE1tJaZQromeQ4KgvPz9gyuiw&amp;s=10" alt="Ilustrasi Body Care — hanya pemanis" loading="lazy" referrerpolicy="no-referrer">
+            <div class="visual-shade"></div>
+            <div class="visual-copy">
+              <div class="eyebrow">🧼 KATEGORI</div>
+              <h2>Body Care</h2>
+              <p>Ilustrasi hanya pemanis layout.</p>
+            </div>
+          </div>
+          <div class="products">
+        <a class="product" href="https://s.shopee.co.id/8fSG6FqEIu" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Nuvo Sabun Mandi Cair Pump 500ml GRTAIS Nuvo Refill 400ml</h3>
+          <div class="meta">
+            <strong>Rp 38,0RB</strong>
+            <span>🔥 198 terjual</span>
+          </div>
+          <div class="shop">DESAN STORE27</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1LffMmI9BY" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>White Inc Alpha Glowhite &amp; Retinol White Body Lotion - Mencerahkan &amp; Melembapkan Kulit</h3>
+          <div class="meta">
+            <strong>Rp 5,0RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Ae`ra Skin</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1AHmKNDtQ" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>( HARGA GROSIR ) 500ML HANBODY LOVELY JUMBO EMERON LOVELY HANDBODY 500ML Ready Banyak Varian, Jeju, White Pearl, Almond, Radiant, &amp; Bengkoang. Kemasan Baru 500ml</h3>
+          <div class="meta">
+            <strong>Rp 9,0RB</strong>
+            <span>🔥 220 terjual</span>
+          </div>
+          <div class="shop">Lapak_Tokokku</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/40gQXg7zmK" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Paket 18 pcs Sabun Mandi Shinzui Skin Lightening 60gr - Mencerahkan Kulit, Menjaga Kelembapan, Aroma Menenangkan</h3>
+          <div class="meta">
+            <strong>Rp 25,7RB</strong>
+            <span>🔥 8 terjual</span>
+          </div>
+          <div class="shop">OLIME Official Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3LQjkSAX8O" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>WHITE INC Alpha Glowhite 100 ml Body Lotion Whitening Menghidrasi Kulit | Tester | Mencerahkan memutihkan</h3>
+          <div class="meta">
+            <strong>Rp 6,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">@FAMILY-1@</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/5LBo882v51" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>White Inc Alpha Glowhite Body Lotion Mencerahkan Kulit - 100ml Dengan Kandungan Alpha Arbutin &amp; 10 Whitening Agent</h3>
+          <div class="meta">
+            <strong>Rp 5,5RB</strong>
+            <span>🔥 3RB+ terjual</span>
+          </div>
+          <div class="shop">Toko kosmetik shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/60RUvM0NjD" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Nivea Body Lotion Daily Protection Sun spf 33 100ml | Merah Jingga Official</h3>
+          <div class="meta">
+            <strong>Rp 30,5RB</strong>
+            <span>🔥 9RB+ terjual</span>
+          </div>
+          <div class="shop">Merah Jingga Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/9KhwtTngxv" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Glow &amp; Lovely Sabun Mandi Cair Refill 800ml</h3>
+          <div class="meta">
+            <strong>Rp 22,0RB</strong>
+            <span>🔥 102 terjual</span>
+          </div>
+          <div class="shop">DESAN STORE27</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/8fSG6FqEJz" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
+          <div class="meta">
+            <strong>Rp 40,3RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Unilever Beauty Shop</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/1gIVlOGsWf" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>REXA Natural Deodorant REXA Tawas Cair 100ml menghilangkan bau badan / ketiak</h3>
+          <div class="meta">
+            <strong>Rp 4,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Kamaskoat</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/2LYCYcELAr" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>DEODORANT ORIGINAL SPRAY TAWAS 60ML</h3>
+          <div class="meta">
+            <strong>Rp 4,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Deo_Skin</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/Ln8AwLxEX" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[Lebih Murah] Purbasari Lulur Pengantin 500G / Lulur Pemutih Whitening Pencerah / Lulur pelembab kulit / Lulur Badan perontok daki / Kemasan Hemat ekonomis</h3>
+          <div class="meta">
+            <strong>Rp 29,9RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Purbasari Official Store</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/50YxjW4Bld" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>[ BELIA ] NIVEA Deodorant Roll On | 25 | 50 | Men | Women | Whitening Pearl Beauty Silk Touch Hijab</h3>
+          <div class="meta">
+            <strong>Rp 12,1RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Belia Cosmetic</div>
+        </a>
+        <a class="product" href="https://s.shopee.co.id/3LQjkSAX9T" target="_blank" rel="sponsored noopener">
+          <div class="product-top">
+            <span class="mini-cat">Body Care</span>
+            <span class="arrow">↗</span>
+          </div>
+          <h3>Vaseline Repairing Petroleum Jelly Original 100% Pure 50ml</h3>
+          <div class="meta">
+            <strong>Rp 35,5RB</strong>
+            <span>🔥 10RB+ terjual</span>
+          </div>
+          <div class="shop">Unilever Indonesia Official Shop</div>
+        </a></div>
+        </section>
+  <div class="footer">RACUNIN • Barang bagus yang bikin susah bilang “nggak”.</div>
 </main>
-<footer><div class="wrap">© 2026 RACUNIN · Barang bagus yang bikin susah bilang “nggak”.</div></footer>
-
-<script>
-const cards=[...document.querySelectorAll('.product-card')];
-const input=document.querySelector('#search');
-let active='Semua';
-function filterProducts(){
-  const q=(input.value||'').toLowerCase().trim();
-  let shown=0;
-  cards.forEach(c=>{
-    const okCat=active==='Semua'||c.dataset.cat===active;
-    const okQ=!q||c.dataset.search.includes(q);
-    c.style.display=okCat&&okQ?'':'none';
-    if(okCat&&okQ) shown++;
-  });
-  document.querySelector('#empty').style.display=shown?'none':'block';
-}
-function setCategory(cat){
-  active=cat;
-  document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.filter===cat));
-  document.querySelector('#produk').scrollIntoView({behavior:'smooth',block:'start'});
-  filterProducts();
-}
-input.addEventListener('input',filterProducts);
-</script>
-</body></html>
+</body>
+</html>
