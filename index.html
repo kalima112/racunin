@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RACUNIN — Temuan Shopee yang Worth It</title>
+<meta name="description" content="Temuan Shopee yang worth it: barang murah, unik, aesthetic, gadget, dan kebutuhan anak kos. Pilihan simpel biar nggak salah checkout.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="RACUNIN — Temuan Shopee yang Worth It">
+<meta property="og:description" content="Barang yang bikin susah bilang nggak 👀">
+<meta property="og:type" content="website">
+<link rel="canonical" href="/">
+<style>
+:root{--bg:#fffaf5;--ink:#171717;--muted:#6f6a64;--card:#fff;--line:#eee4d8;--accent:#ff6b35;--accent2:#ffb000}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 20px}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-weight:950;font-size:26px;letter-spacing:-1.5px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;color:#555;font-weight:700;font-size:14px}
+.hero{padding:64px 0 38px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.badge{display:inline-block;background:#fff0e8;color:#d94e1d;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800}
+h1{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-4px;margin:18px 0 18px}
+.hero p{font-size:18px;line-height:1.6;color:var(--muted);max-width:650px}
+.search{margin-top:24px;background:white;border:1px solid var(--line);border-radius:18px;padding:6px;display:flex;box-shadow:0 10px 30px #7d52200d}
+.search input{flex:1;border:0;outline:0;padding:15px;font-size:16px;background:transparent}.search button{border:0;background:var(--ink);color:white;padding:13px 20px;border-radius:13px;font-weight:800;cursor:pointer}
+.hero-card{background:var(--ink);color:white;border-radius:28px;padding:28px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(1deg)}
+.hero-card .emoji{font-size:64px}.hero-card h2{font-size:30px;margin:0;letter-spacing:-1px}.hero-card p{color:#c9c4bf;margin:8px 0 0;font-size:14px}
+section{padding:30px 0 52px}h2.section-title{font-size:30px;letter-spacing:-1.5px;margin:0 0 18px}
+.chips{display:flex;gap:10px;overflow:auto;padding-bottom:5px}.chip{white-space:nowrap;padding:11px 15px;border:1px solid var(--line);background:white;border-radius:999px;font-weight:800;font-size:14px;cursor:pointer}.chip.active{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:15px;display:flex;flex-direction:column;min-height:260px}.pic{height:135px;border-radius:15px;background:linear-gradient(135deg,#ffe9dc,#fff);display:grid;place-items:center;font-size:54px;margin-bottom:13px}.tag{font-size:11px;font-weight:900;color:#d94e1d;text-transform:uppercase;letter-spacing:.5px}.product h3{font-size:17px;margin:6px 0;line-height:1.2}.price{font-weight:900;margin-top:auto;padding-top:8px}.buy{margin-top:11px;background:var(--accent);color:white;text-align:center;padding:11px;border-radius:12px;font-weight:900;font-size:13px}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.article{background:white;border:1px solid var(--line);padding:20px;border-radius:20px}.article .mini{font-size:12px;color:var(--muted);font-weight:800}.article h3{font-size:20px;line-height:1.2;margin:10px 0}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:42px}.hero-card{min-height:210px}.grid{grid-template-columns:repeat(2,1fr)}.article-grid{grid-template-columns:1fr}.navlinks{display:none}h1{letter-spacing:-2.5px}.wrap{padding:0 15px}}
+@media(max-width:430px){.grid{grid-template-columns:1fr 1fr}.product{padding:11px}.pic{height:110px}.product h3{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="/">RACUN<span>IN</span> 👀</a><div class="navlinks"><a href="#produk">Produk</a><a href="#artikel">Artikel</a><a href="#kategori">Kategori</a></div></nav>
+
+<header class="hero">
+<div>
+<span class="badge">✨ Temuan yang worth it</span>
+<h1>Barang bagus yang bikin susah bilang “nggak”.</h1>
+<p>RACUNIN bantu kamu nemuin barang Shopee yang menarik, berguna, dan ramah kantong — tanpa harus scroll marketplace berjam-jam.</p>
+<form class="search" onsubmit="event.preventDefault(); filterSearch()">
+<input id="q" placeholder="Cari barang, misalnya: lampu kamar..." aria-label="Cari produk">
+<button type="submit">Cari</button>
+</form>
+</div>
+<div class="hero-card"><div class="emoji">🛒✨</div><div><h2>Checkout dengan otak.</h2><p>Kami pilihkan ide produk berdasarkan kategori, budget, dan kebutuhan.</p></div></div>
+</header>
+
+<section id="kategori">
+<h2 class="section-title">Mau cari apa?</h2>
+<div class="chips">
+<button class="chip active" data-cat="all">Semua</button><button class="chip" data-cat="kos">Anak Kos</button><button class="chip" data-cat="kamar">Kamar</button><button class="chip" data-cat="gadget">Gadget</button><button class="chip" data-cat="unik">Barang Unik</button>
+</div>
+</section>
+
+<section id="produk">
+<h2 class="section-title">🔥 Pilihan hari ini</h2>
+<div class="grid" id="products">
+<article class="product" data-cat="kamar" data-name="lampu kamar aesthetic">
+<div class="pic">💡</div><span class="tag">Kamar</span><h3>Lampu kamar aesthetic</h3><div class="price">Mulai Rp25K</div><a class="buy" href="https://shopee.co.id/" target="_blank" rel="sponsored noopener">CEK DI SHOPEE →</a>
+</article>
+<article class="product" data-cat="gadget" data-name="holder hp meja">
+<div class="pic">📱</div><span class="tag">Gadget</span><h3>Holder HP meja yang simpel</h3><div class="price">Mulai Rp15K</div><a class="buy" href="https://shopee.co.id/" target="_blank" rel="sponsored noopener">CEK DI SHOPEE →</a>
+</article>
+<article class="product" data-cat="kos" data-name="rak serbaguna anak kos">
+<div class="pic">🧺</div><span class="tag">Anak Kos</span><h3>Rak serbaguna buat kamar kos</h3><div class="price">Mulai Rp30K</div><a class="buy" href="https://shopee.co.id/" target="_blank" rel="sponsored noopener">CEK DI SHOPEE →</a>
+</article>
+<article class="product" data-cat="unik" data-name="barang unik pembersih keyboard">
+<div class="pic">🧼</div><span class="tag">Unik</span><h3>Pembersih keyboard mini</h3><div class="price">Mulai Rp10K</div><a class="buy" href="https://shopee.co.id/" target="_blank" rel="sponsored noopener">CEK DI SHOPEE →</a>
+</article>
+</div>
+</section>
+
+<section id="artikel">
+<h2 class="section-title">📚 Biar nggak salah checkout</h2>
+<div class="article-grid">
+<a class="article" href="#"><span class="mini">PANDUAN • 5 MENIT</span><h3>25 barang Shopee di bawah 50 ribu yang beneran kepake</h3><p>Checklist simpel sebelum checkout supaya nggak beli barang cuma karena lucu.</p></a>
+<a class="article" href="#"><span class="mini">ANAK KOS • BUDGET</span><h3>Upgrade kamar kos tanpa bikin dompet nangis</h3><p>Mulai dari pencahayaan, storage, sampai barang kecil yang bikin kamar lebih nyaman.</p></a>
+<a class="article" href="#"><span class="mini">GADGET • TIPS</span><h3>Aksesoris HP murah yang ternyata berguna banget</h3><p>Pilihan aksesoris yang bisa bikin setup harian lebih praktis.</p></a>
+</div>
+</section>
+
+<footer>
+<b>RACUNIN</b> — Temuan Shopee yang worth it.<br><br>
+Catatan: beberapa tautan di situs ini dapat berupa tautan afiliasi. Kami dapat memperoleh komisi jika kamu melakukan pembelian melalui tautan tersebut, tanpa biaya tambahan untukmu.
+</footer>
+</div>
+<script>
+const chips=[...document.querySelectorAll('.chip')], products=[...document.querySelectorAll('.product')];
+function show(cat='all',q=''){products.forEach(p=>{const okCat=cat==='all'||p.dataset.cat===cat;const okQ=!q||p.dataset.name.includes(q.toLowerCase());p.style.display=okCat&&okQ?'flex':'none'})}
+chips.forEach(c=>c.onclick=()=>{chips.forEach(x=>x.classList.remove('active'));c.classList.add('active');show(c.dataset.cat,document.getElementById('q').value)});
+function filterSearch(){const active=document.querySelector('.chip.active').dataset.cat;show(active,document.getElementById('q').value);document.getElementById('produk').scrollIntoView({behavior:'smooth'})}
+</script>
+</body>
+</html>
