@@ -47,3 +47,7 @@ V2 sudah memiliki:
 - struktur heading yang lebih jelas
 
 Tidak ada jaminan ranking Google. Untuk hasil SEO, tambahkan konten unik, foto produk yang sah digunakan, pengalaman/review yang nyata, internal linking, dan Search Console.
+
+
+## FIXED V2
+CSS dan JavaScript sudah ditanam langsung ke setiap halaman HTML agar GitHub Pages tetap tampil normal meskipun upload folder `assets` bermasalah.
